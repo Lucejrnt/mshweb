@@ -27,9 +27,9 @@
         }
         &.active {
           color: $primary !important;
-          background-color: transparent;
+          background-color: $white;
           &:hover {
-            background-color: transparent;
+            background-color: $white;
           }
         }
       }

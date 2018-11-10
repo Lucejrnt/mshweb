@@ -1,108 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+  <title>Creative - Start Bootstrap Theme</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <!-- Custom fonts for this template -->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-    <!-- Plugin CSS -->
-    <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <!-- Plugin CSS -->
+  <link href="../vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="../css/creative.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../css/creative.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body id="page-top">
+<body id="page-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.html">Accueil</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html#presentation"></i> Présentation</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html#criteres">Explication des critères</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="index.html#explorer">Explorer</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="filtre.html">Trouver ma moto</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.html">Accueil</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#presentation"></i> Présentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#criteres">Explication des critères</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="index.html#explorer">Explorer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="filtre.html">Trouver ma moto</a>
 
-            </li>
-          </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="text-uppercase">
+            <strong>Filtrer les critères essentiels nécessaires à ma futur bécanne</strong>
+          </h1>
+          <hr>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="text-faded mb-5">Le choix d'une moto n'est pas si simple qu'il n'y parrait. Ce site a pour objectif de vous aider à prendre votre décision pour une bécanne qui vous correspond. </p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#filtres">Choisir mes filtres</a>
         </div>
       </div>
-    </nav>
+    </div>
+  </header>
 
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <strong>Filtrer les critères essentiels nécessaires à ma futur bécanne</strong>
-            </h1>
-            <hr>
+
+
+  <!-- Listes des filtres en sous catégories -->
+  <section class="bg-primary" id="filtres">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading text-white">Bien choisir les filtres qui te sont nécessaires ou te tiennent à coeur</h2>
+          <hr class="light my-4">
+          <p class="text-faded mb-4">Le choix d'une moto peut parraître peut important, tant qu'elle a une puissance intéressante, qu'elle est belle et qu'elle rentre dans notre budget, ce sera forcément bien ? L'expérience de nombreux motardes et motards est là pour nous prouver que c'est plus compliqué que cela. Et nous souhaitons, grâce à ce site, vous donner l'occasion de réfléchir sur ce que vous rechercher dans la conduite de votre bécanne.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 mx-auto">
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Choix de ma moto</a>
+    </div>
+
+    <div class="col-lg-8 mx-auto">
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="index.html#criteres">Présentation des critères</a>
+    </div>
+    <br/>
+  </section>
+
+  <section id="filtrer">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Filtrer les critères de ma moto</h2>
+          <hr class="my-4">
+        </div>
+      </div>
+    </div>
+
+    <form id="findBikesForm" class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 text-center">
+          <label for="inputEmail3">Email</label>
+          <div class="col-lg-12 text-center">
+            <input type="email" v-model="mail" class="form-control" id="inputEmail3" >
           </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Le choix d'une moto n'est pas si simple qu'il n'y parrait. Ce site a pour objectif de vous aider à prendre votre décision pour une bécanne qui vous correspond. </p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#filtres">Choisir mes filtres</a>
+        </div>
+        <div class="col-lg-6 col-md-6 text-center">
+          <label for="inputPassword3">Password</label>
+          <div class="col-lg-12 text-center">
+            <input type="password" v-model="pw" class="form-control" id="inputPassword3" >
           </div>
         </div>
       </div>
-    </header>
+    </div>
 
-<!-- Listes des filtres en sous catégories -->
-    <section class="bg-primary" id="filtres">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Bien choisir les filtres qui te sont nécessaires ou te tiennent à coeur</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">Le choix d'une moto peut parraître peut important, tant qu'elle a une puissance intéressante, qu'elle est belle et qu'elle rentre dans notre budget, ce sera forcément bien ? L'expérience de nombreux motardes et motards est là pour nous prouver que c'est plus compliqué que cela. Et nous souhaitons, grâce à ce site, vous donner l'occasion de réfléchir sur ce que vous rechercher dans la conduite de votre bécanne.</p>
+  </section>
+
+<div width="500px" float="left">
+  <section class="bg-primary">
+    <!-- // MOTEUR -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h3 class="section-heading">Moteur</h3>
+        </div>
+      </div>
+    </div>
+
+    <form id="findBikesForm" class="container">
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <label for="inputPassword3">Puissance</label>
+          <div class="col-lg-12 text-center">
+            <select class="custom-select my-1 mr-sm-2" v-model="puissance" class="form-control" id="inlineFormCustomSelectPref" >
+              <option value="" selected>Choose...</option>
+              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <label for="inputPassword3">Couple max</label>
+          <div class="col-lg-12 text-center">
+            <select class="custom-select my-1 mr-sm-2" v-model="couple_max" class="form-control" id="inlineFormCustomSelectPref" >
+              <option value="" selected>Choose...</option>
+              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <label for="inputPassword3">Régime moteur du couple max</label>
+          <div class="col-lg-12 text-center">
+            <select class="custom-select my-1 mr-sm-2" v-model="rpm_cmax" class="form-control" id="inlineFormCustomSelectPref" >
+              <option value="" selected>Choose...</option>
+              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+            </select>
           </div>
         </div>
       </div>
-      <div class="col-lg-8 mx-auto">
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Choix de ma moto</a>
-      </div>
-      <div class="col-lg-8 mx-auto">
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="index.html#criteres">Présentation des critères</a>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <label for="inputPassword3">Cylindré du moteur</label>
+          <div class="col-lg-12 text-center">
+            <select class="custom-select my-1 mr-sm-2" v-model="cylindre_cm" class="form-control" id="inlineFormCustomSelectPref" >
+              <option value="" selected>Choose...</option>
+              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <label for="inputPassword3">Nombre de cylindre</label>
+          <div class="col-lg-12 text-center">
+            <select class="custom-select my-1 mr-sm-2" v-model="cylindre_nb" class="form-control" id="inlineFormCustomSelectPref" >
+              <option value="" selected>Choose...</option>
+              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <label for="inputPassword3">Architecture moteur</label>
+          <div class="col-lg-12 text-center">
+            <select class="custom-select my-1 mr-sm-2" v-model="architecture" class="form-control" id="inlineFormCustomSelectPref" >
+              <option value="" selected>Choose...</option>
+              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+            </select>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <section class="">
+      <!-- // SECURITE -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-heading">Sécurité</h3>
+          </div>
+        </div>
+      </div>
 
-    <!-- Plugin JavaScript -->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+      <form id="findBikesForm" class="container">
 
-    <!-- Custom scripts for this template -->
-    <script src="../js/creative.min.js"></script>
+        <div class="row">
 
-  </body>
+          <div class="col-lg-3 col-md-6 text-center">
+            <label for="inputPassword3">Equipements</label>
+            <div class="col-lg-12 text-center">
+              <select class="custom-select my-1 mr-sm-2" v-model="equipements" class="form-control" id="inlineFormCustomSelectPref" >
+                <option value="" selected>Choose...</option>
+                <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <label for="inputPassword3">Freinage avant</label>
+            <div class="col-lg-12 text-center">
+              <select class="custom-select my-1 mr-sm-2" v-model="frein_av" class="form-control" id="inlineFormCustomSelectPref" >
+                <option value="" selected>Choose...</option>
+                <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <label for="inputPassword3">Freinage arrière</label>
+            <div class="col-lg-12 text-center">
+              <select class="custom-select my-1 mr-sm-2" v-model="frein_ar" class="form-control" id="inlineFormCustomSelectPref" >
+                <option value="" selected>Choose...</option>
+                <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center">
+            <label for="inputPassword3">Type de pneus</label>
+            <div class="col-lg-12 text-center">
+              <select class="custom-select my-1 mr-sm-2" v-model="pneus" class="form-control" id="inlineFormCustomSelectPref" >
+                <option value="" selected>Choose...</option>
+                <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-primary">
+        <!-- // MANIABILITE -->
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h3 class="section-heading">Maniabilité</h3>
+            </div>
+          </div>
+        </div>
+
+        <form id="findBikesForm" class="container">
+
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6 text-center">
+              <label for="inputPassword3">Masse de la moto</label>
+              <div class="col-lg-12 text-center">
+                <select class="custom-select my-1 mr-sm-2" v-model="masse" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>Choose...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 text-center">
+              <label for="inputPassword3">Type de guidon</label>
+              <div class="col-lg-12 text-center">
+                <select class="custom-select my-1 mr-sm-2" v-model="guidon" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>Choose...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 text-center">
+              <label for="inputPassword3">Type de cadre</label>
+              <div class="col-lg-12 text-center">
+                <select class="custom-select my-1 mr-sm-2" v-model="cadre" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>Choose...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <label for="inputPassword3">Taille de la roue avant</label>
+              <div class="col-lg-12 text-center">
+                <select class="custom-select my-1 mr-sm-2" v-model="roue_av" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>Choose...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <label for="inputPassword3">Taille de la roue arrière</label>
+              <div class="col-lg-12 text-center">
+                <select class="custom-select my-1 mr-sm-2" v-model="roue_ar" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>Choose...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="">
+          <!-- // LOOK -->
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h3 class="section-heading">Look de la moto</h3>
+              </div>
+            </div>
+          </div>
+
+          <form id="findBikesForm" class="container">
+
+            <div class="row">
+
+              <div class="col-lg-4 col-md-6 text-center">
+                <label for="inputPassword3">Type de moto</label>
+                <div class="col-lg-12 text-center">
+                  <select class="custom-select my-1 mr-sm-2" v-model="type" class="form-control" id="inlineFormCustomSelectPref" >
+                    <option value="" selected>Choose...</option>
+                    <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 text-center">
+                <label for="inputPassword3">Style de la moto</label>
+                <div class="col-lg-12 text-center">
+                  <select class="custom-select my-1 mr-sm-2" v-model="style" class="form-control" id="inlineFormCustomSelectPref" >
+                    <option value="" selected>Choose...</option>
+                    <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 text-center">
+                <label for="inputPassword3">Coloris</label>
+                <div class="col-lg-12 text-center">
+                  <select class="custom-select my-1 mr-sm-2" v-model="coloris" class="form-control" id="inlineFormCustomSelectPref" >
+                    <option value="" selected>Choose...</option>
+                    <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="bg-primary">
+            <!-- // CONFORT -->
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center">
+                  <h3 class="section-heading">Confort de la moto</h3>
+                </div>
+              </div>
+            </div>
+
+            <form id="findBikesForm" class="container">
+
+              <div class="row">
+
+                <div class="col-lg-4 col-md-6 text-center">
+                  <label for="inputPassword3">Type de suspension</label>
+                  <div class="col-lg-12 text-center">
+                    <select class="custom-select my-1 mr-sm-2" v-model="suspension" class="form-control" id="inlineFormCustomSelectPref" >
+                      <option value="" selected>Choose...</option>
+                      <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center">
+                  <label for="inputPassword3">Position sur la moto</label>
+                  <div class="col-lg-12 text-center">
+                    <select class="custom-select my-1 mr-sm-2" v-model="position" class="form-control" id="inlineFormCustomSelectPref" >
+                      <option value="" selected>Choose...</option>
+                      <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center">
+                  <label for="inputPassword3">Hauteur de la selle</label>
+                  <div class="col-lg-12 text-center">
+                    <select class="custom-select my-1 mr-sm-2" v-model="hauteur" class="form-control" id="inlineFormCustomSelectPref" >
+                      <option value="" selected>Choose...</option>
+                      <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-lg-4 col-md-6 text-center">
+                  <label for="inputPassword3">Conduite duo ?</label>
+                  <div class="col-lg-12 text-center">
+                    <select class="custom-select my-1 mr-sm-2" v-model="duo" class="form-control" id="inlineFormCustomSelectPref" >
+                      <option value="" selected>Choose...</option>
+                      <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center">
+                  <label for="inputPassword3">Bulle aérodynamique ?</label>
+                  <div class="col-lg-12 text-center">
+                    <select class="custom-select my-1 mr-sm-2" v-model="bulle" class="form-control" id="inlineFormCustomSelectPref" >
+                      <option value="" selected>Choose...</option>
+                      <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center">
+                  <label for="inputPassword3">Accessoires de confort</label>
+                  <div class="col-lg-12 text-center">
+                    <select class="custom-select my-1 mr-sm-2" v-model="accessoires" class="form-control" id="inlineFormCustomSelectPref" >
+                      <option value="" selected>Choose...</option>
+                      <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="">
+              <!-- // BRICOLAGE -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 text-center">
+                    <h3 class="section-heading">Possibilité de bricolage sur la moto</h3>
+                  </div>
+                </div>
+              </div>
+
+              <form id="findBikesForm" class="container">
+
+                <div class="row">
+
+                  <div class="col-lg-6 col-md-6 text-center">
+                    <label for="inputPassword3">Entretien maison ?</label>
+                    <div class="col-lg-12 text-center">
+                      <select class="custom-select my-1 mr-sm-2" v-model="entretiens" class="form-control" id="inlineFormCustomSelectPref" >
+                        <option value="" selected>Choose...</option>
+                        <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 col-md-6 text-center">
+                    <label for="inputPassword3">Posibilité de transformation ?</label>
+                    <div class="col-lg-12 text-center">
+                      <select class="custom-select my-1 mr-sm-2" v-model="transformations" class="form-control" id="inlineFormCustomSelectPref" >
+                        <option value="" selected>Choose...</option>
+                        <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+              </section>
+        </div>
+
+              <section class="">
+
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button v-on:click="submit" class="btn btn-primary">Sign in</button>
+          <div v-show="display"> those are my results </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button v-on:click="query" class="btn btn-primary">Get the options in the database</button>
+        </div>
+      </div>
+
+
+    </form>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../js/creative.min.js"></script>
+  <script src="js/views.js"></script>
+
+</body>
 
 </html>

@@ -252,6 +252,20 @@
       </div>
     </section>
 
+    <!-- Page Content -->
+    <section id="page-content-wrapper">
+        <div class="container-fluid" id="defaultVue">
+            <h1>My amazing webpage</h1>
+            <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+            <p class="alert alert-danger"> hello world </p>
+            <a v-on:click="getMotos" class="btn btn-secondary">Display my motos</a>
+            {{ result }}
+        </div>
+    </section>
+
+
+
+
     <!-- Bootstrap core JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -263,6 +277,14 @@
 
     <!-- Custom scripts for this template -->
     <script src="../js/creative.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
 
   </body>
 

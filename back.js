@@ -53,7 +53,7 @@ app.get('/motos', (request, response) => {
   });
 });
 
-app.get('/puissances', (request, response) => {
+app.get('/power', (request, response) => {
   console.log('I received a get request. Now querying the database');
   // querying the database and putting the results in the http response
   collectionPuissance.find({}).toArray(function(err, res)  {

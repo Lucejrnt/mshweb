@@ -55,11 +55,12 @@ new Vue({
           console.log(data);
       });
 
-      $.get( "/power",
-        function( data ) {
+      $.get( "/power", function( data ) {
             this.power = data;
+            console.log(data);
         },
-        function ( data ) {
+
+      function ( data ) {
            console.log("Could not get the puissances in the database");
         }
       );

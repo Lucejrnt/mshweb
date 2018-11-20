@@ -14,7 +14,7 @@ var serverPort = 8080;
 const MongoClient = require('mongodb').MongoClient;
 
 // Connection URL to mlab
-const url = 'mongodb://motowebdb:motoweb22db@ds039311.mlab.com:39311/motowebdb';
+const url = 'mongodb://tmp:tmptmp1@ds039311.mlab.com:39311/motowebdb';
 
 // Database Name
 const dbName = 'motowebdb';
@@ -27,6 +27,9 @@ MongoClient.connect(url, function(err, client) {
     console.log("Connected successfully to server");
     db = client.db(dbName);
     motos = db.collection('motorbikes');
+    if (motos == null) {
+      console.log("Could not find the collection motos");
+    }
   } else {
     console.log("could not connect to the database");
   }

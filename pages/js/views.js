@@ -48,16 +48,17 @@ new Vue({
     },
     query: function() {
       // Those values are supposed to be queried in your database
-      this.options = {
-        option1 : { id : 1, value : 'options1'},
-        option2 : { id : 2, value : 'options2'},
-        option3 : { id : 3, value : 'options3'},
+      this.puissance = {
+        puissance1 : { id : 1, value : 'options1'},
+        puissance2 : { id : 2, value : 'options2'},
+        puissance3 : { id : 3, value : 'options3'}
       }
       this.puissances = {
         puissance1 : { id : 1, value : '100cv'},
         puissance2 : { id : 2, value : '200cv'},
-        puissance3 : { id : 3, value : '300cv'},
+        puissance3 : { id : 3, value : '300cv'}
       }
+      console.log(this.puissance);
     }
   }
 });

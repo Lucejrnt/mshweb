@@ -20,6 +20,7 @@ const url = 'mongodb://tmp:tmptmp1@ds039311.mlab.com:39311/motowebdb';
 const dbName = 'motowebdb';
 var db;
 var motos;
+var collectionPuissance;
 
 //Connection to mongodb database
 MongoClient.connect(url, function(err, client) {
@@ -27,6 +28,7 @@ MongoClient.connect(url, function(err, client) {
     console.log("Connected successfully to server");
     db = client.db(dbName);
     motos = db.collection('motorbikes');
+    // collectionPuissance = db.collection('puissances');
     if (motos == null) {
       console.log("Could not find the collection motos");
     }
@@ -49,7 +51,14 @@ app.get('/motos', (request, response) => {
   motos.find({}).toArray(function(err, res)  {
     response.send(res);
   });
+});
 
+app.get('/puissances', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  collectionPuissance.find({}).toArray(function(err, res)  {
+    response.send(res);
+  });
 });
 
 app.listen(process.env.PORT || serverPort);

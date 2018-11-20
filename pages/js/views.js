@@ -40,7 +40,8 @@ new Vue({
 
 
     display: false,
-    options: null
+    options: null,
+    puissances : null
   },
   methods: {
     submit: function() {
@@ -48,16 +49,24 @@ new Vue({
     },
     query: function() {
       // Those values are supposed to be queried in your database
-      this.puissance = {
-        puissance1 : { id : 1, value : 'options1'},
-        puissance2 : { id : 2, value : 'options2'},
-        puissance3 : { id : 3, value : 'options3'}
-      }
       this.puissances = {
         puissance1 : { id : 1, value : '100cv'},
         puissance2 : { id : 2, value : '200cv'},
         puissance3 : { id : 3, value : '300cv'}
       }
+
+      $.get( "/motos", function( data ) {
+          console.log(data);
+      });
+
+      $.get( "/puissances",
+        function( data ) {
+            this.puissances = data;
+        },
+        function ( data ) {
+           console.log("Could not get the puissances in the database");
+        }
+      );
       console.log(this.puissance);
     }
   }

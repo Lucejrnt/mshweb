@@ -6,9 +6,10 @@ new Vue({
     mail: null,
     // MOTEUR
     puissance : null,
+    power : null
     couple_max : null,
     rpm_cmax : null,
-    allumage : null,
+    fuel_system : null,
     cylindre_nb : null,
     cylindre_cm : null,
     architecture : null,
@@ -41,7 +42,7 @@ new Vue({
 
     display: false,
     options: null,
-    puissances : null
+
   },
   methods: {
     submit: function() {
@@ -49,19 +50,14 @@ new Vue({
     },
     query: function() {
       // Those values are supposed to be queried in your database
-      this.puissances = {
-        puissance1 : { id : 1, value : '100cv'},
-        puissance2 : { id : 2, value : '200cv'},
-        puissance3 : { id : 3, value : '300cv'}
-      }
 
       $.get( "/motos", function( data ) {
           console.log(data);
       });
 
-      $.get( "/puissances",
+      $.get( "/power",
         function( data ) {
-            this.puissances = data;
+            this.power = data;
         },
         function ( data ) {
            console.log("Could not get the puissances in the database");

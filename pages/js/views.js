@@ -55,7 +55,7 @@ new Vue({
           console.log(data);
       });
 
-      $.get( "/power", function( data ) {
+      $.get( "/motos", function( data ) {
             this.power = data;
             console.log(data);
         },

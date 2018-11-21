@@ -20,7 +20,7 @@ const url = 'mongodb://tmp:tmptmp1@ds039311.mlab.com:39311/motowebdb';
 const dbName = 'motowebdb';
 var db;
 var motos;
-var collectionPuissance;
+var collectionPower;
 
 //Connection to mongodb database
 MongoClient.connect(url, function(err, client) {
@@ -56,7 +56,7 @@ app.get('/motos', (request, response) => {
 app.get('/power', (request, response) => {
   console.log('I received a get request. Now querying the database');
   // querying the database and putting the results in the http response
-  collectionPuissance.find({}).toArray(function(err, res)  {
+  collectionPower.find({}).toArray(function(err, res)  {
     response.send(res);
   });
 });

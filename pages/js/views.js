@@ -6,7 +6,7 @@ new Vue({
     mail: null,
     // MOTEUR
     puissance : null,
-    power : null
+    power : null,
     couple_max : null,
     rpm_cmax : null,
     fuel_system : null,

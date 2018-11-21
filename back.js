@@ -28,7 +28,6 @@ MongoClient.connect(url, function(err, client) {
     console.log("Connected successfully to server");
     db = client.db(dbName);
     motos = db.collection('motorbikes');
-    power = db.collection('motorbikes')f={"power": 1};
     // collectionPuissance = db.collection('puissances');
     if (motos == null) {
       console.log("Could not find the collection motos");
@@ -49,16 +48,11 @@ app.get('/', function(request, response){
 app.get('/motos', (request, response) => {
   console.log('I received a get request. Now querying the database');
   // querying the database and putting the results in the http response
-  motos.find({}).toArray(function(err, res)  {
+  motos.find({field:power}).toArray(function(err, res)  {
     response.send(res);
   });
 });
 
-app.get('/power', (request, response) => {
-  console.log('I received a get request. Now querying the database');
-  // querying the database and putting the results in the http response
-  motos.find({}).toArray(function(err, res)  {
-    response.send(res);
   });
 });
 

@@ -46,18 +46,18 @@ app.get('/', function(request, response){
     response.sendFile('index.html');
 });
 
-// app.get('/motos', (request, response) => {
-//   console.log('I received a get request. Now querying the database');
-//   // querying the database and putting the results in the http response
-//   motos.find({}).toArray(function(err, res)  {
-//     response.send(res);
-//   });
-// });
-
 app.get('/motos', (request, response) => {
   console.log('I received a get request. Now querying the database');
   // querying the database and putting the results in the http response
-  motos.find({field:power}).toArray(function(err, res)  {
+  motos.find({}).toArray(function(err, res)  {
+    response.send(res);
+  });
+});
+
+app.get('/power', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  motos.find({}).toArray(function(err, res)  {
     response.send(res);
   });
 });

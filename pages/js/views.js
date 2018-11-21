@@ -51,11 +51,11 @@ new Vue({
     query: function() {
       // Those values are supposed to be queried in your database
 
-      // $.get( "/motos", function( data ) {
-      //     console.log(data);
-      // });
-
       $.get( "/motos", function( data ) {
+          console.log(data);
+      });
+
+      $.get( "/power", function( data ) {
             this.power = data;
             console.log(data);
         },

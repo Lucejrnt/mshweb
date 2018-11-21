@@ -20,7 +20,7 @@ const url = 'mongodb://tmp:tmptmp1@ds039311.mlab.com:39311/motowebdb';
 const dbName = 'motowebdb';
 var db;
 var motos;
-var power;
+var collectionPower;
 
 //Connection to mongodb database
 MongoClient.connect(url, function(err, client) {
@@ -48,11 +48,16 @@ app.get('/', function(request, response){
 app.get('/motos', (request, response) => {
   console.log('I received a get request. Now querying the database');
   // querying the database and putting the results in the http response
-  motos.find({field:power}).toArray(function(err, res)  {
+  motos.find({}).toArray(function(err, res)  {
     response.send(res);
   });
 });
 
+app.get('/power', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  collectionPower.find({}).toArray(function(err, res)  {
+    response.send(res);
   });
 });
 

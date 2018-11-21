@@ -64,7 +64,7 @@ new Vue({
            console.log("Could not get the puissances in the database");
         }
       );
-      console.log(this.power);
+      console.log(this.puissance);
     }
   }
 });

@@ -37,7 +37,7 @@ new Vue({
     accessoires : null,
     // BRICOLOAGE
     entretiens : null,
-    transformation : null,
+    transformations : null,
 
 
     display: false,

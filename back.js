@@ -20,7 +20,7 @@ const url = 'mongodb://tmp:tmptmp1@ds039311.mlab.com:39311/motowebdb';
 const dbName = 'motowebdb';
 var db;
 var motos;
-var collectionPower;
+var power;
 
 //Connection to mongodb database
 MongoClient.connect(url, function(err, client) {

@@ -61,3 +61,7 @@ var view = new Vue({
     }
   }
 });
+
+$( document ).ready(function() {
+  view.query();
+});

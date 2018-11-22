@@ -56,8 +56,11 @@ app.get('/motos', (request, response) => {
 app.get('/power', (request, response) => {
   console.log('I received a get request. Now querying the database');
   // querying the database and putting the results in the http response
-  collectionPower.find({}).toArray(function(err, res)  {
-    response.send(res);
+  motos.find({}) //We get all the motos
+    .project({power : 1, _id : 0}) //We only keep the power values, and remove the ids
+    .toArray((err, res) => {
+      response.send(res);
+      //You might want to sort the values 
   });
 });
 

@@ -77,391 +77,391 @@
     <div class="left-half">
       <form id="findBikesForm">
 
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Filtrer les critères de ma moto</h2>
-          <hr class="my-4">
-        </div>
-      </div>
-
-      <!-- // MOTEUR -->
-      <section>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <a class="font-primary"></a>
-          <a class="font-primary"></a>
-          <a class="font-primary">Moteur</a>
-          <hr class="my-4">
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="Puissance">Puissance</a>
+        <div class="row">
           <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="power" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in power" value="opt.id"> {{ opt.value }} </option>
-            </select>
+            <h2 class="section-heading">Filtrer les critères de ma moto</h2>
+            <hr class="my-4">
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Couple max</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="couple_max" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+        <!-- // MOTEUR -->
+        <section>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <a class="font-primary"></a>
+              <a class="font-primary"></a>
+              <a class="font-primary">Moteur</a>
+              <hr class="my-4">
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Régime moteur couple max</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="rpm_cmax" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="Puissance">Puissance</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="power" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in powers" value="opt"> {{ opt }} </option>
+                </select>
+              </div>            
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Couple max</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="couple_max" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Cylindré du moteur</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="cylindre_cm" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Régime moteur couple max</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="rpm_cmax" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Cylindré du moteur</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="cylindre_cm" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Nombre de cylindre</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="cylindre_nb" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Nombre de cylindre</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="cylindre_nb" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Architecture moteur</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="architecture" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Architecture moteur</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="architecture" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="col-lg-6 col-md-6 text-center">
           </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-6 text-center">
-      </div>
-    </section>
+        </section>
 
 
-      <!-- // SECURITE -->
-    <section>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <a class="font-primary"></a>
-          <a class="font-primary"></a>
-          <div class="font-primary">Sécurité</div>
-          <hr class="my-4">
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Equipements</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="equipements" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+        <!-- // SECURITE -->
+        <section>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <a class="font-primary"></a>
+              <a class="font-primary"></a>
+              <div class="font-primary">Sécurité</div>
+              <hr class="my-4">
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Freinage avant</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="frein_av" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Equipements</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="equipements" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Freinage avant</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="frein_av" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Freinage arrière</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="frein_ar" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Freinage arrière</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="frein_ar" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Type de pneus</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="pneus" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Type de pneus</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="pneus" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+        <!-- // MANIABILITE -->
+        <section>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <a class="font-primary"></a>
+              <a class="font-primary"></a>
+              <div class="font-primary">Maniabilité</div>
+              <hr class="my-4">
+            </div>
           </div>
-        </div>
-      </div>
-      </section>
 
-      <!-- // MANIABILITE -->
-      <section>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <a class="font-primary"></a>
-          <a class="font-primary"></a>
-          <div class="font-primary">Maniabilité</div>
-          <hr class="my-4">
-        </div>
-      </div>
+          <div class="row">
 
-      <div class="row">
-
-        <div class="col-lg-12 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Masse</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="masse" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+            <div class="col-lg-12 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Masse</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="masse" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Guidon</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="guidon" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Guidon</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="guidon" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Cadre</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="cadre" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Cadre</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="cadre" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Taille roue avant</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="roue_av" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Taille roue arrière</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="roue_ar" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div class="row">
-
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Taille roue avant</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="roue_av" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+        <!-- // LOOK -->
+        <section>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <a class="font-primary"></a>
+              <a class="font-primary"></a>
+              <div class="font-primary">Look de la moto</div>
+              <hr class="my-4">
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Taille roue arrière</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="roue_ar" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Type de moto</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="type" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Style</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="style" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-      <!-- // LOOK -->
-      <section>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <a class="font-primary"></a>
-          <a class="font-primary"></a>
-          <div class="font-primary">Look de la moto</div>
-          <hr class="my-4">
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Type de moto</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="type" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+            <div class="col-lg-12 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Coloris</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="coloris" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Style</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="style" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+        <!-- // CONFORT -->
+        <section>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <a class="font-primary"></a>
+              <a class="font-primary"></a>
+              <div class="font-primary">Confort de la moto</div>
+              <hr class="my-4">
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-12 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Coloris</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="coloris" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Type de suspension</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="suspension" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Position sur la moto</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="position" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-      <!-- // CONFORT -->
-      <section>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <a class="font-primary"></a>
-          <a class="font-primary"></a>
-          <div class="font-primary">Confort de la moto</div>
-          <hr class="my-4">
-        </div>
-      </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Hauteur de la selle</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="hauteur" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
 
-      <div class="row">
-
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Type de suspension</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="suspension" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Conduite duo ?</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="duo" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Position sur la moto</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="position" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Bulle aérodynamique ?</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="bulle" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Accessoires de confort</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="accessoires" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <div class="row">
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Hauteur de la selle</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="hauteur" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+        <!-- // BRICOLAGE -->
+        <section>
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <a class="font-primary"></a>
+              <a class="font-primary"></a>
+              <h3 class="font-primary">Possibilité de bricolage sur la moto</h3>
+              <hr class="my-4">
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Conduite duo ?</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="duo" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
+          <div class="row">
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Entretien maison ?</a>
+              <div class="col-lg-12 text-center">
+                <select class="font-small" v-model="entretiens" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 text-center">
+              <a class="font-small" for="inputPassword3">Posibilité de transformation ?</a>
+              <div class="col-lg-12">
+                <select class="font-small" v-model="transformations" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                </select>
+              </div>
+            </div>
           </div>
+        </section>
+
+        <div class="col-sm-10">
+          <button type="button" v-on:click="submit" class="btn btn-primary">Sign in</button>
+          <div v-show="display"> those are my results </div>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Bulle aérodynamique ?</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="bulle" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
-          </div>
+        <div class="col-sm-10">
+          <button type="button" v-on:click="query" class="btn btn-primary">Get the options in the database</button>
         </div>
-
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Accessoires de confort</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="accessoires" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      <!-- // BRICOLAGE -->
-    <section>
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <a class="font-primary"></a>
-          <a class="font-primary"></a>
-          <h3 class="font-primary">Possibilité de bricolage sur la moto</h3>
-          <hr class="my-4">
-        </div>
-      </div>
-
-      <div class="row">
-
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Entretien maison ?</a>
-          <div class="col-lg-12 text-center">
-            <select class="font-small" v-model="entretiens" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6 text-center">
-          <a class="font-small" for="inputPassword3">Posibilité de transformation ?</a>
-          <div class="col-lg-12">
-            <select class="font-small" v-model="transformations" class="form-control" id="inlineFormCustomSelectPref" >
-              <option value="" selected>...</option>
-              <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      <div class="col-sm-10">
-        <button type="button" v-on:click="submit" class="btn btn-primary">Sign in</button>
-        <div v-show="display"> those are my results </div>
-      </div>
-      <div class="col-sm-10">
-        <button type="button" v-on:click="query" class="btn btn-primary">Get the options in the database</button>
-      </div>
 
       </form>
     </div>
@@ -478,7 +478,7 @@
   <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
   <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="js/views.js"></script>
   <!-- Custom scripts for this template -->
   <script src="../js/creative.js"></script>

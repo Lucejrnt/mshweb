@@ -112,7 +112,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="couple_max" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in maxtorques" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in maxtorques" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -124,7 +124,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="rpm_cmax" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in maxtorquesrpms" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in maxtorquerpms" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -134,7 +134,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="cylindre_cm" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in strokecms" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in strokecms" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -146,7 +146,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="cylindre_nb" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in strokenbs" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in strokenbs" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -156,7 +156,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="architecture" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in architectures" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in architectures" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>

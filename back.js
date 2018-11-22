@@ -95,9 +95,8 @@ app.get('/maxtorquerpm', (request, response) => {
 app.get('/strokenb', (request, response) => {
   console.log('I received a get request. Now querying the database');
   // querying the database and putting the results in the http response
-  motos.find({}) //We get all the motos
+  motos.distinct("strokenb", {}) //We get all the motos
     .project({strokenb : 1, _id : 0})
-  //  .distinct("strokenb") //We only keep the power values, and remove the ids
     .toArray((err, res) => {
       response.send(res);
       //You might want to sort the values

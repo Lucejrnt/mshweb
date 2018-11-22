@@ -69,11 +69,11 @@ var view = new Vue({
           });
       });
 
-      // $.get( "/maxtorquerpm", function(data) {
-      //     view.maxtorquerpms = data.map(function(el){
-      //       return el.maxtorquerpm;
-      //     });
-      // });
+      $.get( "/maxtorquerpm", function(data) {
+          view.maxtorquerpms = data.map(function(el){
+            return el.maxtorquerpm;
+          });
+      });
 
       $.get( "/strokenb", function(data) {
         view.strokenbs = data.map(function(el){

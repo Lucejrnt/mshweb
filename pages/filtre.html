@@ -185,7 +185,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="equipements" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in equipments" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -195,7 +195,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="frein_av" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in frontbrakes" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -207,7 +207,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="frein_ar" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in rearbrakes" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -217,7 +217,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="pneus" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in tiress" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -242,7 +242,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="masse" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in weights" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -254,7 +254,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="guidon" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in handlebars" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -264,7 +264,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="cadre" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in frames" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -277,7 +277,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="roue_av" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in frontwheels" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -287,7 +287,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="roue_ar" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in rearwheels" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -312,7 +312,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="type" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in types" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -322,7 +322,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="style" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in styles" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -334,7 +334,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="coloris" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in coloriss" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -359,7 +359,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="suspension" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in suspensions" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -369,7 +369,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="position" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in positions" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -381,7 +381,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="hauteur" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in seatheights" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -391,7 +391,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="duo" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in duos" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -403,7 +403,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="bulle" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in windprotections" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -413,7 +413,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="accessoires" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in confortaccessoriess" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -438,7 +438,7 @@
               <div class="col-lg-12 text-center">
                 <select class="font-small" v-model="entretiens" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in homemadeservices" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>
@@ -448,7 +448,7 @@
               <div class="col-lg-12">
                 <select class="font-small" v-model="transformations" class="form-control" id="inlineFormCustomSelectPref" >
                   <option value="" selected>...</option>
-                  <option v-for="opt in options" value="opt.id"> {{ opt.value }} </option>
+                  <option v-for="opt in transformationss" value="opt"> {{ opt }} </option>
                 </select>
               </div>
             </div>

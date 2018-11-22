@@ -42,6 +42,11 @@ var view = new Vue({
 
     /* Valeurs retournées par la base de données afin d'afficher les possibilités dans le formulaire */
     powers: null, //Toutes les puissances disponibles dans la base de données
+    maxtorques: null,
+    maxtorquerpms: null,
+    strokenbs: null,
+    strokecms: null,
+    architectures: null,
 
     display: false,
     options: null
@@ -53,10 +58,39 @@ var view = new Vue({
     query: function(event) {
       // Those values are supposed to be queried in your database
       $.get( "/power", function(data) {
-          var powers = data.map(function(el){
+          view.powers = data.map(function(el){
             return el.power;
           });
-          view.powers = powers;
+      });
+
+      $.get( "/maxtorque", function(data) {
+          view.maxtorques = data.map(function(el){
+            return el.maxtorque;
+          });
+      });
+
+      // $.get( "/maxtorquerpm", function(data) {
+      //     view.maxtorquerpms = data.map(function(el){
+      //       return el.maxtorquerpm;
+      //     });
+      // });
+
+      $.get( "/strokenb", function(data) {
+        view.strokenbs = data.map(function(el){
+            return el.strokenb;
+          });
+      });
+
+      $.get( "/strokecm", function(data) {
+          view.strokecms = data.map(function(el){
+            return el.strokecm;
+          });
+      });
+
+      $.get( "/architecture", function(data) {
+          view.architectures = data.map(function(el){
+            return el.architecture;
+          });
       });
     }
   }

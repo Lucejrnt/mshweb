@@ -20,6 +20,12 @@ const url = 'mongodb://tmp:tmptmp1@ds039311.mlab.com:39311/motowebdb';
 const dbName = 'motowebdb';
 var db;
 var motos;
+var power;
+var maxtorque;
+var maxtorquerpm;
+var strokenb;
+var strokecm;
+var architecture;
 var collectionPower;
 
 //Connection to mongodb database
@@ -60,7 +66,64 @@ app.get('/power', (request, response) => {
     .project({power : 1, _id : 0}) //We only keep the power values, and remove the ids
     .toArray((err, res) => {
       response.send(res);
-      //You might want to sort the values 
+      //You might want to sort the values
+  });
+});
+
+app.get('/maxtorque', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  motos.find({}) //We get all the motos
+    .project({maxtorque : 1, _id : 0}) //We only keep the power values, and remove the ids
+    .toArray((err, res) => {
+      response.send(res);
+      //You might want to sort the values
+  });
+});
+
+app.get('/maxtorquerpm', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  motos.find({}) //We get all the motos
+    .project({maxtorquerpm : 1, _id : 0}) //We only keep the power values, and remove the ids
+    .toArray((err, res) => {
+      response.send(res);
+      //You might want to sort the values
+  });
+});
+
+app.get('/strokenb', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  motos.find({}) //We get all the motos
+    .project({strokenb : 1, _id : 0})
+  //  .distinct("strokenb") //We only keep the power values, and remove the ids
+    .toArray((err, res) => {
+      response.send(res);
+      //You might want to sort the values
+  });
+});
+
+app.get('/strokecm', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  motos.find({}) //We get all the motos
+    .project({strokecm : 1, _id : 0}) //We only keep the power values, and remove the ids
+    .toArray((err, res) => {
+      response.send(res);
+      //You might want to sort the values
+  });
+});
+
+app.get('/architecture', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  motos.find({}) //We get all the motos
+    .project({architecture : 1, _id : 0}) //We only keep the power values, and remove the ids
+    .toArray((err, res) => {
+      response.send(res);
+      //You might want to sort the values
+
   });
 });
 

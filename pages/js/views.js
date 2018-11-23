@@ -38,8 +38,75 @@ var view = new Vue({
       homemadeservices : null,
       transformationss : null,
 
+      /* Valeurs choisie par l'utilisateur afin de chercher les valeurs correspondantes dans la base de données */
+      transformations : null,
+      entretiens: null,
+      accessoires: null,
+      bulle : null,
+      duo: null,
+      hauteur: null,
+      position: null,
+      suspension: null,
+      coloris: null,
+      style: null,
+      type: null,
+      roue_ar: null,
+      roue_av: null,
+      cadre: null,
+      guidon: null,
+      masse: null,
+      pneus: null,
+      frein_ar: null,
+      frein_av: null,
+      equipements: null,
+      architecture: null,
+      cylindre_nb: null,
+      cylindre_cm: null,
+      rpm_cmax: null,
+      couple_max: null,
+      power: null,
 
-
+      // Options utilisées pour le slider
+      sliderOptions : {
+        value: [
+          0,
+          200
+        ],
+        min: 0,
+        max: 200,
+        tooltipDir: [
+          "bottom",
+          "top"
+        ],
+        style: {
+          "marginBottom": "30px"
+        },
+        bgStyle: {
+          "backgroundColor": "#fff",
+          "boxShadow": "inset 0.5px 0.5px 3px 1px rgba(0,0,0,.36)"
+        },
+        sliderStyle: [
+          {
+            "backgroundColor": "#f05b72"
+          },
+          {
+            "backgroundColor": "#3498db"
+          }
+        ],
+        tooltipStyle: [
+          {
+            "backgroundColor": "#f05b72",
+            "borderColor": "#f05b72"
+          },
+          {
+            "backgroundColor": "#3498db",
+            "borderColor": "#3498db"
+          }
+        ],
+        processStyle: {
+          "backgroundImage": "-webkit-linear-gradient(left, #f05b72, #3498db)"
+        }
+      },
     display: false,
     options: null
   },
@@ -154,6 +221,9 @@ var view = new Vue({
       });
 
     }
+  },
+  components: {
+    'vue-slider': window[ 'vue-slider-component' ]
   }
 });
 

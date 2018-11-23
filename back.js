@@ -44,11 +44,11 @@ MongoClient.connect(url, function(err, client) {
 });
 
 //adds the html and css files to the context
-app.use(express.static("."));
+app.use(express.static("./pages/"));
 
 //returns the main reactive page when the right url is quire
 app.get('/', function(request, response){
-    response.sendFile('index.html');
+    response.sendFile('pages/index.html',{ root: __dirname });
 });
 
 app.get('/motos', (request, response) => {

@@ -18,7 +18,7 @@
     },
     "scripts": {
         "prestart": "npm install",
-        "start": "node back.js"
+        "start": "npm install && node back.js"
     },
     "license": "MIT",
     "dependencies": {

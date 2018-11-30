@@ -108,47 +108,47 @@ var view = new Vue({
         }
       },
 
-      powersliderOptions : {
-        value: [ //valeur de départ des sliders
-          0,
-          200
-        ],
-        data: [
-          view.powers
-        ],
-        tooltipDir: [
-          "bottom",
-          "top"
-        ],
-        style: {
-          "marginBottom": "30px"
-        },
-        bgStyle: {
-          "backgroundColor": "#fff",
-          "boxShadow": "inset 0.5px 0.5px 3px 1px rgba(0,0,0,.36)"
-        },
-        sliderStyle: [
-          {
-            "backgroundColor": "#f05b72"
-          },
-          {
-            "backgroundColor": "#3498db"
-          }
-        ],
-        tooltipStyle: [
-          {
-            "backgroundColor": "#f05b72",
-            "borderColor": "#f05b72"
-          },
-          {
-            "backgroundColor": "#3498db",
-            "borderColor": "#3498db"
-          }
-        ],
-        processStyle: {
-          "backgroundImage": "-webkit-linear-gradient(left, #f05b72, #3498db)"
-        }
-      },
+      // powersliderOptions : {
+      //   value: [ //valeur de départ des sliders
+      //     0,
+      //     200
+      //   ],
+      //   data: [
+      //     view.powers
+      //   ],
+      //   tooltipDir: [
+      //     "bottom",
+      //     "top"
+      //   ],
+      //   style: {
+      //     "marginBottom": "30px"
+      //   },
+      //   bgStyle: {
+      //     "backgroundColor": "#fff",
+      //     "boxShadow": "inset 0.5px 0.5px 3px 1px rgba(0,0,0,.36)"
+      //   },
+      //   sliderStyle: [
+      //     {
+      //       "backgroundColor": "#f05b72"
+      //     },
+      //     {
+      //       "backgroundColor": "#3498db"
+      //     }
+      //   ],
+      //   tooltipStyle: [
+      //     {
+      //       "backgroundColor": "#f05b72",
+      //       "borderColor": "#f05b72"
+      //     },
+      //     {
+      //       "backgroundColor": "#3498db",
+      //       "borderColor": "#3498db"
+      //     }
+      //   ],
+      //   processStyle: {
+      //     "backgroundImage": "-webkit-linear-gradient(left, #f05b72, #3498db)"
+      //   }
+      // },
     display: false,
     options: null
   },

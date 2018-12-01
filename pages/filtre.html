@@ -21,7 +21,7 @@
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/creative.css" rel="stylesheet">
+  <link href="css/creativeBlue.css" rel="stylesheet">
 
 </head>
 
@@ -46,7 +46,7 @@
             <a class="nav-link js-scroll-trigger" href="index.html#explorer">Explorer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="filtre.html">Trouver ma moto</a>
+            <a class="nav-link js-scroll-trigger" href="filtre.html">Choisir une moto</a>
 
           </li>
         </ul>
@@ -88,21 +88,41 @@
 
 
 <!-- MOTEUR -->
+
+          Example de slider:
+          <div class="container" >
+              <!-- //v-model="sliderValue" -->
+              <vue-slider ref="slider" v-bind="sliderOptions"></vue-slider>
+          </div>
+
+
           <div class="row">
             <div class="col-lg-12 text-center">
               <a class="font-primary">Moteur</a>
             </div>
           </div>
 
-           <div class="col-lg-12 col-md-12 text-center">
-             <a class="font-small" for="Puissance">Permis</a>
+          <div class="row">
+           <div class="col-lg-6 col-md-6 text-center">
+             <a class="font-small" for="Puissance">A2</a>
              <div class="col-lg-12 text-center">
-               <select class="font-small" v-model="power" class="form-control" id="inlineFormCustomSelectPref" >
+               <select class="font-small" v-model="A2" class="form-control" id="inlineFormCustomSelectPref" >
                  <option value="" selected>...</option>
-                 <option v-for="opt in powers" value="opt"> {{ opt }} </option>
+                 <option v-for="opt in A2s" value="opt"> {{ opt }} </option>
                </select>
              </div>
            </div>
+
+           <div class="col-lg-6 col-md-6 text-center">
+             <a class="font-small" for="Puissance">A</a>
+             <div class="col-lg-12 text-center">
+               <select class="font-small" v-model="Aa" class="form-control" id="inlineFormCustomSelectPref" >
+                 <option value="" selected>...</option>
+                 <option v-for="opt in Aas" value="opt"> {{ opt }} </option>
+               </select>
+             </div>
+           </div>
+         </div>
 
           <div class="panel-heading">
             <a href="#item1" data-toggle="collapse"> ... </a>
@@ -181,6 +201,7 @@
           </div>
           <br>
 
+          <!-- SECURITE -->
 
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -188,7 +209,7 @@
             </div>
           </div>
 
-           <div class="col-lg-12 col-md-12 text-center">
+           <!-- <div class="col-lg-12 col-md-12 text-center">
              <a class="font-small" for="Puissance">Sécurité</a>
              <div class="col-lg-12 text-center">
                <select class="font-small" v-model="power" class="form-control" id="inlineFormCustomSelectPref" >
@@ -196,7 +217,7 @@
                  <option v-for="opt in powers" value="opt"> {{ opt }} </option>
                </select>
              </div>
-           </div>
+           </div> -->
 
           <div class="panel-heading">
             <a href="#item2" data-toggle="collapse"> ... </a>
@@ -260,7 +281,7 @@
             </div>
           </div>
 
-           <div class="col-lg-12 col-md-12 text-center">
+           <!-- <div class="col-lg-12 col-md-12 text-center">
              <a class="font-small" for="Puissance">Maniabilité</a>
              <div class="col-lg-12 text-center">
                <select class="font-small" v-model="power" class="form-control" id="inlineFormCustomSelectPref" >
@@ -268,7 +289,7 @@
                  <option v-for="opt in powers" value="opt"> {{ opt }} </option>
                </select>
              </div>
-           </div>
+           </div> -->
 
           <div class="panel-heading">
             <a href="#item3" data-toggle="collapse"> ... </a>
@@ -345,7 +366,7 @@
             </div>
           </div>
 
-           <div class="col-lg-12 col-md-12 text-center">
+           <!-- <div class="col-lg-12 col-md-12 text-center">
              <a class="font-small" for="Puissance">Look</a>
              <div class="col-lg-12 text-center">
                <select class="font-small" v-model="power" class="form-control" id="inlineFormCustomSelectPref" >
@@ -353,7 +374,7 @@
                  <option v-for="opt in powers" value="opt"> {{ opt }} </option>
                </select>
              </div>
-           </div>
+           </div> -->
 
           <div class="panel-heading">
             <a href="#item4" data-toggle="collapse"> ... </a>
@@ -407,7 +428,7 @@
             </div>
           </div>
 
-           <div class="col-lg-12 col-md-12 text-center">
+           <!-- <div class="col-lg-12 col-md-12 text-center">
              <a class="font-small" for="Puissance">Elements de confort</a>
              <div class="col-lg-12 text-center">
                <select class="font-small" v-model="power" class="form-control" id="inlineFormCustomSelectPref" >
@@ -415,7 +436,7 @@
                  <option v-for="opt in powers" value="opt"> {{ opt }} </option>
                </select>
              </div>
-           </div>
+           </div> -->
 
           <div class="panel-heading">
             <a href="#item5" data-toggle="collapse"> ... </a>
@@ -502,7 +523,7 @@
             </div>
           </div>
 
-           <div class="col-lg-12 col-md-12 text-center">
+           <!-- <div class="col-lg-12 col-md-12 text-center">
              <a class="font-small" for="Puissance">Oui/Non</a>
              <div class="col-lg-12 text-center">
                <select class="font-small" v-model="power" class="form-control" id="inlineFormCustomSelectPref" >
@@ -510,7 +531,7 @@
                  <option v-for="opt in powers" value="opt"> {{ opt }} </option>
                </select>
              </div>
-           </div>
+           </div> -->
 
           <div class="panel-heading">
             <a href="#item6" data-toggle="collapse"> ... </a>

@@ -67,6 +67,22 @@ app.get('/power', (request, response) => {
   });
 });
 
+app.get('/Aa', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  motos.distinct("Aa", function(err, data) {
+    response.send(data.sort());
+  });
+});
+
+app.get('/A2', (request, response) => {
+  console.log('I received a get request. Now querying the database');
+  // querying the database and putting the results in the http response
+  motos.distinct("A2", function(err, data) {
+    response.send(data.sort());
+  });
+});
+
 app.get('/maxtorque', (request, response) => {
   console.log('I received a get request. Now querying the database');
   // querying the database and putting the results in the http response
@@ -267,6 +283,10 @@ app.get('/transformations', (request, response) => {
   });
 });
 
+// var url_string = "http://motowebdb.com/motos?power=puissance";
+// var url = new URL(url_string);
+// var puissance = url.searchParams.get("puissance");
+// console.log(c); //affiche ma puissance
 
 
 

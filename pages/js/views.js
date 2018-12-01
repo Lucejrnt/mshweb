@@ -7,6 +7,9 @@ var view = new Vue({
       mail: null,
       // MOTEUR
       powers: null, //Toutes les puissances disponibles dans la base de données
+      licences:null,
+      Aas: null,
+      A2s: null,
       maxtorques: null,
       maxtorquerpms: null,
       strokenbs: null,
@@ -39,6 +42,9 @@ var view = new Vue({
       transformationss : null,
 
       /* Valeurs choisie par l'utilisateur afin de chercher les valeurs correspondantes dans la base de données */
+      permis: null,
+      Aa: null,
+      A2: null,
       transformations : null,
       entretiens: null,
       accessoires: null,
@@ -155,9 +161,21 @@ var view = new Vue({
   methods: {
     submit: function() {
       this.display = !this.display
+      // $get("/motos?power=puissance", function(data) {
+      //   view.results = data;
+      // })
     },
     query: function(event) {
       // Those values are supposed to be queried in your database
+
+      $.get( "/Aa", function(data) {
+          view.Aas = data;
+      });
+
+      $.get( "/A2", function(data) {
+          view.A2s = data;
+      });
+
       $.get( "/power", function(data) {
           view.powers = data;
       });

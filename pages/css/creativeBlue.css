@@ -17,21 +17,21 @@ body {
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #F05F40;
+  border-color: #2e42b2; //couleur de la barre de séparation
 }
 
 hr.light {
-  border-color: #fff;
+  border-color: #fff; //couleur de la barre de séparation light
 }
 
 a {
-  color: #F05F40;
+  color: #2e42b2; //couleur texte adresse email et maybe petits points
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: #f05f40;
+  color: #2e42b2; //couleur des textes en a
 }
 
 
@@ -45,23 +45,23 @@ h6 {
 }
 
 .bg-primary {
-  background-color: #FF7C44 !important;
+  background-color: #54bdee !important; //Couleur du fond de section coloré
 }
 
 .font-primary {
-  color: #FF7C44 !important;
+  color: #54bdee !important; //Couleur texte des filtres et tout
   font-size: 17px;
   font-family: 'Open Sans';
 }
 
 .font-small {
-  color: #000000 !important;
+  color: #000000 !important; //Couleur texte noir petits ex: filtre
   font-size: 15px;
   font-family: 'Open Sans';
 }
 
 .bg-dark {
-  background-color: #212529 !important;
+  background-color: #212529 !important; //Couleur fond de section dark
 }
 
 .text-faded {
@@ -78,35 +78,35 @@ section {
 }
 
 ::-moz-selection {
-  color: #fff;
-  background: #212529;
+  color: #fff; //NA
+  background: #212529; //NA
   text-shadow: none;
 }
 
 ::selection {
-  color: #fff;
-  background: #212529;
+  color: #fff; //NA
+  background: #212529 //NA
   text-shadow: none;
 }
 
 img::-moz-selection {
-  color: #fff;
+  color: #fff; //NA
   background: transparent;
 }
 
 img::selection {
-  color: #fff;
+  color: #fff; //NA
   background: transparent;
 }
 
 img::-moz-selection {
-  color: #fff;
+  color: #fff; //NA
   background: transparent;
 }
 
 #mainNav {
-  border-bottom: 1px solid rgba(33, 37, 41, 0.1);
-  background-color: #fff;
+  border-bottom: 1px solid rgba(84, 189, 238, 0.1);
+  background-color: #fff; //Couleur du fond de la nav bar
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -115,12 +115,12 @@ img::-moz-selection {
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
-  color: #F05F40;
+  color: #54bdee; //Couleur du accueil en temps normal
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #f05f40;
+  color: #2e42b2; //Couleur de Accueil quand on clic dessus
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
@@ -128,17 +128,17 @@ img::-moz-selection {
   font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #212529;
+  color: #212529; //Couleur des chapitres de la nav bar en temps normal
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-  color: #F05F40;
+  color: #54bdee; //Couleur de survole des chapitres de la navbar
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-  color: #F05F40 !important;
+  color: #2e42b2 !important; //Couleur quand on on survole les sections en scroll
   background-color: transparent;
 }
 
@@ -154,6 +154,7 @@ img::-moz-selection {
   }
   #mainNav .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
+    /* //la couleur du ACCUEIL en grand en mode transparant */
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
     color: #fff;
@@ -164,6 +165,7 @@ img::-moz-selection {
   #mainNav .navbar-nav > li.nav-item > a.nav-link,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
     color: rgba(255, 255, 255, 0.7);
+        /* //la couleur des chapitres en grand en mode transparant */
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
@@ -174,25 +176,25 @@ img::-moz-selection {
     background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #F05F40;
+    color: #54bdee; //couleur du Accueil en grand quand on scroll
   }
   #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #f05f40;
+    color: #2e42b2; //couleur de ACCUEIL quand on clic dessus après avoir scroll
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: #212529;
+    color: #54bdee; //couleur de tous les chapitres quand on scroll
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #F05F40;
+    color: #2e42b2; //couleur de tous les chapitres quand on clic dessus après avoir scroll
   }
 }
 
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
+  background-image: url("../img/headerblue.jpg");
   background-position: center center;
   background-size: cover;
 }
@@ -254,7 +256,7 @@ header.masthead p {
   text-align: center;
   opacity: 0;
   color: #fff;
-  background: rgba(240, 95, 64, 0.9);
+  background: rgba(84, 189, 238, 0.8); //Couleur de fond des images, rester en RBV car transparent
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -302,7 +304,7 @@ header.masthead p {
 }
 
 .text-primary {
-  color: #FF7C44 !important;
+  color: #54bdee !important; //NA
 }
 
 /* Pattern styles */
@@ -339,13 +341,13 @@ header.masthead p {
 }
 
 .btn-primary {
-  background-color: #FF7C44;
-  border-color: #F05F40;
+  background-color: #2e42b2; //couleur de base btn primary
+  border-color: #F05F40; //Couleur du tour quand on clic
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background-color: #ee4b28 !important;
+  background-color: #54bdee !important; //couleur quand on survole texte et fond
 }
 
 .btn-primary:active, .btn-primary:focus {

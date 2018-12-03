@@ -45,7 +45,7 @@ h6 {
 }
 
 .bg-primary {
-  background-color: #54bdee !important; //Couleur du fond de section coloré
+  background-color: #C63F3F !important; //Couleur du fond de section coloré
 }
 
 .font-primary {
@@ -61,7 +61,7 @@ h6 {
 }
 
 .bg-dark {
-  background-color: #212529 !important; //Couleur fond de section dark
+  background-color: #153C51 !important; //Couleur fond de section dark
 }
 
 .text-faded {
@@ -107,7 +107,7 @@ img::-moz-selection {
 #mainNav {
   border-bottom: 1px solid rgba(84, 189, 238, 0.1);
   background-color: #fff; //Couleur du fond de la nav bar
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans' !important;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -115,12 +115,12 @@ img::-moz-selection {
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
-  color: #54bdee; //Couleur du accueil en temps normal
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #153C51; //Couleur du accueil en temps normal
+  font-family: 'Open Sans' !important;
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #2e42b2; //Couleur de Accueil quand on clic dessus
+  color: #C63F3F; //Couleur de Accueil quand on clic dessus
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
@@ -133,12 +133,12 @@ img::-moz-selection {
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-  color: #54bdee; //Couleur de survole des chapitres de la navbar
+  color: #C63F3F; //Couleur de survole des chapitres de la navbar
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-  color: #2e42b2 !important; //Couleur quand on on survole les sections en scroll
+  color: #C63F3F !important; //Couleur quand on on survole les sections en scroll
   background-color: transparent;
 }
 
@@ -176,14 +176,14 @@ img::-moz-selection {
     background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #54bdee; //couleur du Accueil en grand quand on scroll
+    color: #153C51; //couleur du Accueil en grand quand on scroll
   }
   #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
     color: #2e42b2; //couleur de ACCUEIL quand on clic dessus après avoir scroll
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: #54bdee; //couleur de tous les chapitres quand on scroll
+    color: #153C51; //couleur de tous les chapitres quand on scroll
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
@@ -314,7 +314,7 @@ header.masthead p {
 }
 
 .text-primary {
-  color: #2e42b2 !important; //NA
+  color: #C63F3F !important; //NA
 }
 
 /* Pattern styles */
@@ -351,13 +351,13 @@ header.masthead p {
 }
 
 .btn-primary {
-  background-color: #2e42b2; //couleur de base btn primary
-  border-color: #F05F40; //Couleur du tour quand on clic
+  background-color: #153C51; //couleur de base btn primary
+  border-color: #C63F3F; //Couleur du tour quand on clic
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background-color: #54bdee !important; //couleur quand on survole texte et fond
+  background-color: #C63F3F !important; //couleur quand on survole texte et fond
 }
 
 .btn-primary:active, .btn-primary:focus {

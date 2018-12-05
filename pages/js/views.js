@@ -42,36 +42,39 @@ var view = new Vue({
       transformationss : null,
 
       /* Valeurs choisie par l'utilisateur afin de chercher les valeurs correspondantes dans la base de données */
-      permis: null,
-      Aa: null,
-      A2: null,
-      transformations : null,
-      entretiens: null,
-      accessoires: null,
-      bulle : null,
-      duo: null,
-      hauteur: null,
-      position: null,
-      suspension: null,
-      coloris: null,
-      style: null,
-      type: null,
-      roue_ar: null,
-      roue_av: null,
-      cadre: null,
-      guidon: null,
-      masse: null,
-      pneus: null,
-      frein_ar: null,
-      frein_av: null,
-      equipements: null,
-      architecture: null,
-      cylindre_nb: null,
-      cylindre_cm: null,
-      rpm_cmax: null,
-      couple_max: null,
-      power: null,
+      userChoice : {
+        permis: null,
+        Aa: null,
+        A2: null,
+        transformations : null,
+        entretiens: null,
+        accessoires: null,
+        bulle : null,
+        duo: null,
+        hauteur: null,
+        position: null,
+        suspension: null,
+        coloris: null,
+        style: null,
+        type: null,
+        roue_ar: null,
+        roue_av: null,
+        cadre: null,
+        guidon: null,
+        masse: null,
+        pneus: null,
+        frein_ar: null,
+        frein_av: null,
+        equipements: null,
+        architecture: null,
+        cylindre_nb: null,
+        cylindre_cm: null,
+        rpm_cmax: null,
+        couple_max: null,
+        power: null
+      },
 
+      results : [],
       // Options utilisées pour le slider
       sliderOptions : {
         value: [ //valeur de départ des sliders
@@ -160,11 +163,19 @@ var view = new Vue({
   },
   methods: {
     submit: function() {
-      this.display = !this.display
-      // $get("/motos?power=puissance", function(data) {
-      //   view.results = data;
-      // })
+
+      var filteredUserChoice = {};
+      for (var property in view.userChoice) {
+        if (view.userChoice[property] != null) {
+            filteredUserChoice[property] = view.userChoice[property];
+        }
+      }
+
+      $.get("/motos", filteredUserChoice, function(data) {
+          view.results = data;
+      });
     },
+
     query: function(event) {
       // Those values are supposed to be queried in your database
 

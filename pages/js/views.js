@@ -6,7 +6,7 @@ var view = new Vue({
       pw: null,
       mail: null,
       // MOTEUR
-      powers: null, //Toutes les puissances disponibles dans la base de données
+      powers: [], //Toutes les puissances disponibles dans la base de données
       licences:null,
       Aas: null,
       A2s: null,
@@ -78,11 +78,11 @@ var view = new Vue({
       // Options utilisées pour le slider
       sliderOptions : {
         value: [ //valeur de départ des sliders
-          0,
-          100
+          37,
+          60
         ],
         min: 0,
-        max: 200, //bornes max et min
+        max: 100, //bornes max et min
         tooltipDir: [
           "bottom",
           "top"
@@ -188,6 +188,8 @@ var view = new Vue({
       });
 
       $.get( "/power", function(data) {
+        view.sliderOptions.min = parseInt(data[0]);
+        view.sliderOptions.max = parseInt(data[data.length-1]);
           view.powers = data;
       });
 

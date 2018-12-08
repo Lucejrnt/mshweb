@@ -7,9 +7,6 @@ var view = new Vue({
       mail: null,
       // MOTEUR
       powers: [], //Toutes les puissances disponibles dans la base de données
-      licences:null,
-      Aas: null,
-      A2s: null,
       maxtorques: null,
       maxtorquerpms: null,
       strokenbs: null,
@@ -44,8 +41,6 @@ var view = new Vue({
       /* Valeurs choisie par l'utilisateur afin de chercher les valeurs correspondantes dans la base de données */
       userChoice : {
         permis: null,
-        Aa: null,
-        A2: null,
         transformations : null,
         entretiens: null,
         accessoires: null,
@@ -179,13 +174,6 @@ var view = new Vue({
     query: function(event) {
       // Those values are supposed to be queried in your database
 
-      $.get( "/Aa", function(data) {
-          view.Aas = data;
-      });
-
-      $.get( "/A2", function(data) {
-          view.A2s = data;
-      });
 
       $.get( "/power", function(data) {
         view.sliderOptions.min = parseInt(data[0]);

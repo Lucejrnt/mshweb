@@ -17,21 +17,31 @@ body {
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #2e42b2; //couleur de la barre de séparation
+  border-color: ##C63F3F; /*couleur de la barre de séparation*/
 }
 
 hr.light {
-  border-color: #fff; //couleur de la barre de séparation light
+  border-color: #fff; /*couleur de la barre de séparation light*/
 }
 
 a {
-  color: #2e42b2; //couleur texte adresse email et maybe petits points
+  color: #54bdee; /*couleur texte adresse email et maybe petits points*/
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: #2e42b2; //couleur des textes en a
+  color: #2e42b2; /*couleur des textes en a*/
+}
+
+.selectwidthauto
+{
+     width:100px !important;
+}
+
+.Filtre
+{
+     width:300px !important;
 }
 
 
@@ -45,23 +55,23 @@ h6 {
 }
 
 .bg-primary {
-  background-color: #C63F3F !important; //Couleur du fond de section coloré
+  background-color: #C63F3F !important; /*Couleur du fond de section coloré*/
 }
 
 .font-primary {
-  color: #54bdee !important; //Couleur texte des filtres et tout
+  color: #54bdee !important; /*Couleur texte des filtres et tout*/
   font-size: 17px;
   font-family: 'Open Sans';
 }
 
 .font-small {
-  color: #000000 !important; //Couleur texte noir petits ex: filtre
+  color: #000000 !important; /*Couleur texte noir petits ex: filtre*/
   font-size: 15px;
   font-family: 'Open Sans';
 }
 
 .bg-dark {
-  background-color: #153C51 !important; //Couleur fond de section dark
+  background-color: #153C51 !important; /*Couleur fond de section dark*/
 }
 
 .text-faded {
@@ -72,20 +82,33 @@ section {
   padding: 2rem 0;
 }
 
+.accordeon {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+.accordeon-xl {
+  padding: 1rem 2rem;
+}
+
+.accordeon:hover, .accordeon:focus, .accordeon:active {
+  color: #153C51;
+}
+
 
 .section-heading {
   margin-top: 0;
 }
 
 ::-moz-selection {
-  color: #fff; //NA
-  background: #212529; //NA
+  color: #fff; /*NA*/
+  background: #212529; /*NA*/
   text-shadow: none;
 }
 
 ::selection {
-  color: #fff; //NA
-  background: #212529; //NA
+  color: #fff; /*NA*/
+  background: #212529; /*NA*/
   text-shadow: none;
 }
 
@@ -205,8 +228,12 @@ header.masthead hr {
 }
 
 header.masthead h1 {
-  font-size: 2rem;
-  color: #f44b42;
+  font-size: 4rem;
+  font-weight: 1000;
+  -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #153C51;
+
 }
 
 header.masthead p {
@@ -321,28 +348,38 @@ header.masthead p {
 .container {
   display: table;
   width: 100%;
+}
 
+.containermarge {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .left-half {
   background-color: #ededed;
   position: absolute;
   left: 0px;
-  width: 35%;
+  width: 300px;
+  border-left: #153C51;
+  border-left-width: 5px;
+  height: 100%
 }
 
 .right-half {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: absolute;
   right: 0px;
-  width: 65%;
+  left: 400px;
+  height: 100%;
+  overflow-y:scroll;
 }
 
 .btn {
   font-weight: 700;
   text-transform: uppercase;
-  border: none;
-  border-radius: 300px;
+  border: 1px;
+  border-color: #153C51; /*Couleur du tour de base*/
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -351,16 +388,63 @@ header.masthead p {
 }
 
 .btn-primary {
-  background-color: #153C51; //couleur de base btn primary
-  border-color: #C63F3F; //Couleur du tour quand on clic
+  background-color: #153C51; /*couleur de base btn primary*/
+  border-color: #153C51; /*Couleur du tour de base*/
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background-color: #C63F3F !important; //couleur quand on survole texte et fond
+  background-color: #C63F3F !important; /*couleur quand on survole texte et fond*/
 }
 
 .btn-primary:active, .btn-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
-  box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(198, 63, 63, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(198, 63, 63, 0.5) !important;
 }
+
+.cuadro_intro_hover{
+    padding: 0px; /*NA*/
+		position: relative; /*position du cadre de texte relative au container sur lequel il est appliqué*/
+		overflow: hidden;  /* permet de cacher ce qui dépasse de la boite */
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-right: 70px;
+    height: 200px; /* hauteur de la boite*/
+	}
+	.cuadro_intro_hover:hover .caption{
+		opacity: 1; /* opacité du texte qui apparait*/
+		transform: translateY(-150px); /*NA */
+		-webkit-transform:translateY(-150px); /* de combien de px le texte monte */
+		-moz-transform:translateY(-150px);
+		-ms-transform:translateY(-150px);
+		-o-transform:translateY(-150px);
+	}
+	.cuadro_intro_hover img{
+		z-index: 5; /*NA */
+	}
+	.cuadro_intro_hover .caption{
+		position: absolute; /*position de départ du texte */
+		top:150px;
+		-webkit-transition:all 0.3s ease-in-out;
+		-moz-transition:all 0.3s ease-in-out;
+		-o-transition:all 0.3s ease-in-out;
+		-ms-transition:all 0.3s ease-in-out;
+		transition:all 0.3s ease-in-out;
+		width: 100%;
+	}
+	.cuadro_intro_hover .blur{
+		background-color: rgba(198,198,198,0.7);
+		height: 200px;
+		z-index: 5;
+		position: absolute;
+		width: 100%;
+	}
+	.cuadro_intro_hover .caption-text{
+		z-index: 10;
+		color: #000000;
+		position: absolute;
+		height: 200px;
+		text-align: center;
+		top:-0px;
+		width: 100%;
+	}

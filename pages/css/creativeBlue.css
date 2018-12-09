@@ -50,8 +50,28 @@ h2,
 h3,
 h4,
 h5,
+h6,
+h7 {
+  font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h5 {
+  margin-left: 40px;
+}
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+  margin-left: 40px;
+  font-size: 1rem;
+  font-weight: 20;
+  text-align: left;
+}
+
+h7 {
+  font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+
+  font-size: 1rem;
+  font-weight: 20;
+  text-align: center;
 }
 
 .bg-primary {
@@ -72,6 +92,11 @@ h6 {
 
 .bg-dark {
   background-color: #153C51 !important; /*Couleur fond de section dark*/
+}
+
+.bg-result {
+  text-left: 50px;
+  background-color: #ffffff !important; /*Couleur fond de section dark*/
 }
 
 .text-faded {
@@ -360,7 +385,7 @@ header.masthead p {
   background-color: #ededed;
   position: absolute;
   left: 0px;
-  width: 300px;
+  width: 20%;
   border-left: #153C51;
   border-left-width: 5px;
   height: 100%
@@ -369,9 +394,9 @@ header.masthead p {
 .right-half {
   background-color: #ffffff;
   position: absolute;
-  right: 0px;
-  left: 400px;
+  left: 20%;
   height: 100%;
+  width: 80%;
   overflow-y:scroll;
 }
 
@@ -448,3 +473,80 @@ header.masthead p {
 		top:-0px;
 		width: 100%;
 	}
+
+  #acceso-galeria .wrapper {position: absolute; top: 0; left: 0; height: 100%;}
+	.mix .text {width: 330px; padding: 30px; padding-bottom: 5px;}
+		.mix .text h4 {font-size: 20px; letter-spacing: 7px; line-height: 27px;}
+	.mix figure#img-1 {width: 42.3%;}
+	.mix.show figure#img-1 {left: 24%;}
+	.mix figure#img-2 {width: 28%;}
+	.mix.show figure#img-2 {left: 36%; top: 23%;}
+	.mix figure#img-3 {width: 33.5%;}
+	.mix.show figure#img-3 {left: 60%; top: 9%;}
+	.mix figure#img-4 {width: 26%;}
+	.mix.show figure#img-4 {left: 61%; top: 27%;}
+
+  /*	  DESTACADO
+	********************/
+
+	#destacado {position: relative; display: block; overflow: hidden; width: 100%; background-color: #fff; padding: 150px 0; text-align: center;}
+		.wrapper-visible .wrapper {overflow: visible;}
+		#destacado h3 {display: block; font-size: 30px; text-transform: uppercase; font-weight: 700; margin-bottom: 50px; letter-spacing: 12px; opacity: 0; transform: translate(0,-50px); transition: all 1s;}
+		#destacado .img {position: relative; display: block;}
+			#destacado figure:first-child {position: relative; display: block; margin:0 auto; z-index: 1; opacity: 0; transform: translate(-200px,0); transition: all .8s;}
+			#destacado figure:last-child {position: absolute; top: 0; left: 0; right: 0; margin:0 auto; opacity: 0; transition: all 1s;}
+		#destacado .link {transition: all 1s; opacity: 0; transform: translate(0, 100px);}
+
+		#destacado.show h3, #destacado.show .link {opacity: 1; transform: translate(0);}
+		#destacado.show figure:first-child {opacity: 1; transform: translate(-60px,0);}
+		#destacado.show figure:last-child {opacity: 1; right: -20%;}
+
+
+	/*  ACCESO GALERIA
+	********************/
+
+	.mix {position: relative; display: block; width: 100%;height: 900px; background-color: #fff;background-image: url(../img/sombra-acceso-galeria.png);background-repeat: no-repeat;background-position: center bottom;}
+		.mix .text {position: absolute; top: 110px; left: 0; width: 370px; z-index: 5; overflow: hidden; text-align: right; background-color: #2d2c2c; padding: 50px; padding-bottom: 25px; transition: all 1s; -webkit-transform: scaleX(0); -moz-transform: scaleX(0); -ms-transform: scaleX(0); -o-transform: scaleX(0); transform: scaleX(0); -webkit-transform-origin: right center; -moz-transform-origin: right center; -ms-transform-origin: right center; -o-transform-origin: right center; transform-origin: right center;}
+			.mix .text h4 {display: block; font-size: 25px; text-transform: uppercase; color: #fff; font-weight: 700; letter-spacing: 9px; line-height: 30px; opacity: 0; transform: translateX(30px); transition: all .3s .5s;}
+			.mix .text .link {color: #d73830; opacity: 0; transform: translateX(30px); transition: all .3s .6s;}
+
+		.mix figure {top: 250px; left: 50%; transform: translate(-50%,-50%); opacity: 0; transition: all 1s; overflow: hidden;}
+			.mix figure img {display: block; width: 100%; transition: all 1s cubic-bezier(.23, 1, .32, 1)}
+			.mix figure:hover img {transform: scale(1.1);}
+		.mix figure#img-1 {position: absolute; width: 585px; height: 298px; z-index: 3;}
+		.mix figure#img-2 {position: absolute; width: 356px; height: 266px; z-index: 4;}
+		.mix figure#img-3 {position: absolute; width: 455px; height: 256px; z-index: 2;}
+		.mix figure#img-4 {position: absolute; width: 326px; height: 309px; z-index: 1;}
+
+		.mix.show .text {-webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); transition: all .7s cubic-bezier(0.86, 0, 0.07, 1);}
+		.mix.show .text h4, .mix.show .text .link {opacity: 1; transform: translateX(0);}
+		.mix.show figure#img-1 {top: 0; left: 215px; transform: translate(0,0); opacity: 1; transition: top .7s .8s cubic-bezier(0.86, 0, 0.07, 1), left .7s .8s cubic-bezier(0.86, 0, 0.07, 1), transform .7s .8s cubic-bezier(0.86, 0, 0.07, 1), opacity .5s .8s;}
+		.mix.show figure#img-2 {top: 265px; left: 400px; transform: translate(0,0); opacity: 1; transition: top .7s .5s cubic-bezier(0.86, 0, 0.07, 1), left .7s .5s cubic-bezier(0.86, 0, 0.07, 1), transform .7s .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .5s .5s;}
+		.mix.show figure#img-3 {top: 165px; left: 715px; transform: translate(0,0); opacity: 1; transition: top .7s .6s cubic-bezier(0.86, 0, 0.07, 1), left .7s .6s cubic-bezier(0.86, 0, 0.07, 1), transform .7s .6s cubic-bezier(0.86, 0, 0.07, 1), opacity .5s .6s;}
+		.mix.show figure#img-4 {top: 375px; left: 700px; transform: translate(0,0); opacity: 1; transition: top .7s .8s cubic-bezier(0.86, 0, 0.07, 1), left .7s .8s cubic-bezier(0.86, 0, 0.07, 1), transform .7s .8s cubic-bezier(0.86, 0, 0.07, 1), opacity .5s .8s;}
+		.mix .link {padding: 20px 0;}
+
+		.galeria {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; opacity: 0; pointer-events: none; overflow: hidden; transition: all .5s .5s;}
+		.galeria.active {opacity: 1; pointer-events: auto; transition-delay: 0s;}
+			.galeria .overlay {position: fixed; top: 0; left: 0; width: 0; height: 100%; z-index: 1; background-color: #fff; transition: all .5s cubic-bezier(.23, 1, .32, 1);}
+			.galeria::before {content:''; position: fixed; top: 0; left: 0; width: 0; height: 100%; background-color: #BB1F17; transition: all .5s .3s cubic-bezier(.23, 1, .32, 1);}
+			.galeria .close {position: fixed; top: 0; right: 1.5%; opacity: 0;}
+			.galeria .arrow {cursor: pointer; box-shadow: 0 0 0 2px #000 inset; z-index: 2; font-size: 17px; padding: 11px 9px; color: #000;}
+
+			.galeria.active .overlay {width: 100%; transition-delay: .5s;}
+    		.galeria.active::before {width: 100%; transition-delay: .3s;}
+			.galeria.active .close {opacity: 1; top: 30px; transition-delay: 1.2s;}
+
+			.galeria .wrap-slide {position: relative; display: block; width: 90%; opacity: 0; z-index: 10; top: 5%; margin:0 auto; transform: translateX(-100px); overflow: hidden; text-align: center; transition: all .5s;}
+			.galeria.active .wrap-slide {opacity: 1; transform: translateX(0); transition-delay: .8s;}
+				.wrap-slide img {display: block; margin:0 auto; height: 90vh; width: auto;}
+				.galeria .arrow.left {position: absolute; top: 50%; left: 0; opacity: 0; margin-top: -20px; z-index: 1; font-size: 30px; padding: 4px 15px; transition: all .3s;}
+				.galeria .arrow.right {position: absolute; top: 50%; right: 0; opacity: 0; margin-top: -20px; z-index: 1; font-size: 30px; padding: 4px 15px; transition: all .3s;}
+				.galeria.active .arrow.left {left: 1.7%; opacity: 1; transition-delay: 1.2s;}
+				.galeria.active .arrow.right {right: 1.7%; opacity: 1; transition-delay: 1.2s;}
+
+			.galeria .arrow:hover i {animation: hoverArrow .7s}
+			.galeria .arrow:hover {box-shadow: 0 0 0 30px transparent inset; color: #000; transform: translateX(5px); transition-delay: 0s !important;}
+			.galeria .arrow.hover {transition-delay: 0s !important;}
+
+      .wrapper {position: relative; display: block; overflow: hidden; margin:0 auto; max-width: 1170px; width: 95%;}

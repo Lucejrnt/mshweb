@@ -181,6 +181,11 @@ var view = new Vue({
           view.powers = data;
       });
 
+      // $.get( "/name", function(data) {
+      //   view.randommoto = data[Math.floor(Math.random()*data.length)];
+      //   view.names = data;
+      // });
+
       $.get( "/maxtorque", function(data) {
           view.maxtorques = data;
       });

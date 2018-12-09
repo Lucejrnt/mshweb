@@ -22,6 +22,11 @@
 <!-- Custom styles for this template -->
 <link href="css/creativeBlue.css" rel="stylesheet">
 
+<!-- Liens pour l'accordeon -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+
 </head>
 
 <body id="page-top">
@@ -105,8 +110,19 @@
           </div>
 
           <div class="row">
-
             <div class="col-lg-12 col-md-12 text-center">
+              <a class="font-small" for="inputPassword3">Régime moteur couple max</a>
+              <div class="col-lg-12 text-center">
+                <select class="selectwidthauto"   v-model="userChoice.rpm_cmax" class="form-control" id="inlineFormCustomSelectPref" >
+                  <option value="" selected>...</option>
+                  <option v-for="opt in maxtorquerpms" v-bind:value="opt"> {{ opt }} </option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Couple max</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto"   v-model="userChoice.couple_max" class="form-control" id="inlineFormCustomSelectPref" width="400px" >
@@ -115,21 +131,8 @@
                 </select>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-
-            <div class="col-lg-6 col-md-6 text-center">
-              <a class="font-small" for="inputPassword3">Régime moteur couple max</a>
-              <div class="col-lg-6 text-center">
-                <select class="selectwidthauto"   v-model="userChoice.rpm_cmax" class="form-control" id="inlineFormCustomSelectPref" >
-                  <option value="" selected>...</option>
-                  <option v-for="opt in maxtorquerpms" v-bind:value="opt"> {{ opt }} </option>
-                </select>
-              </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Cylindré du moteur</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto"   v-model="userChoice.cylindre_cm" class="form-control" id="inlineFormCustomSelectPref" >
@@ -141,7 +144,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Nombre de cylindre</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.cylindre_nb" class="form-control" id="inlineFormCustomSelectPref" >
@@ -151,7 +154,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Architecture moteur</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto"   v-model="userChoice.architecture" class="form-control" id="inlineFormCustomSelectPref" >
@@ -190,7 +193,7 @@
         <div class="panel-body">
           <div class="row">
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Equipements</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.equipements" class="form-control" id="inlineFormCustomSelectPref" >
@@ -200,7 +203,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Freinage avant</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.frein_av" class="form-control" id="inlineFormCustomSelectPref" >
@@ -212,7 +215,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Freinage arrière</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.frein_ar" class="form-control" id="inlineFormCustomSelectPref" >
@@ -222,7 +225,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Type de pneus</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.pneus" class="form-control" id="inlineFormCustomSelectPref" >
@@ -245,7 +248,7 @@
         <div class="panel-body">
           <div class="row">
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Masse</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.masse" class="form-control" id="inlineFormCustomSelectPref" >
@@ -255,7 +258,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Guidon</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.guidon" class="form-control" id="inlineFormCustomSelectPref" >
@@ -269,7 +272,7 @@
 
           <div class="row">
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Cadre</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.cadre" class="form-control" id="inlineFormCustomSelectPref" >
@@ -279,7 +282,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Taille roue avant</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.roue_av" class="form-control" id="inlineFormCustomSelectPref" >
@@ -316,7 +319,7 @@
         <div class="panel-body">
           <div class="row">
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Type de moto</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.type" class="form-control" id="inlineFormCustomSelectPref" >
@@ -326,7 +329,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Style</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.style" class="form-control" id="inlineFormCustomSelectPref" >
@@ -363,7 +366,7 @@
 
           <div class="row">
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Type de suspension</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.suspension" class="form-control" id="inlineFormCustomSelectPref" >
@@ -373,7 +376,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Position sur la moto</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.position" class="form-control" id="inlineFormCustomSelectPref" >
@@ -385,7 +388,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Hauteur de la selle</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.hauteur" class="form-control" id="inlineFormCustomSelectPref" >
@@ -395,7 +398,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Accessoires de confort</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.accessoires" class="form-control" id="inlineFormCustomSelectPref" >
@@ -444,7 +447,7 @@
 
           <div class="row">
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Entretien maison ?</a>
               <div class="col-lg-6 text-center">
                 <select class="selectwidthauto" v-model="userChoice.entretiens" class="form-control" id="inlineFormCustomSelectPref" >
@@ -454,7 +457,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 text-center">
+            <div class="col-lg-6 col-md-12 text-center">
               <a class="font-small" for="inputPassword3">Posibilité de transformation ?</a>
               <div class="col-lg-6">
                 <select class="selectwidthauto" v-model="userChoice.transformations" class="form-control" id="inlineFormCustomSelectPref" >
@@ -475,50 +478,121 @@
       <div class="col-sm-12 text-center">
         <button type="button" v-on:click="submit" class="btn btn-primary">Rechercher</button>
       </div>
+
+      <!--<h6> Architecture moteur : {{result.name[Math.floor(Math.random()*result.name.length)]}} </h5> -->
     </div>
   </break>
 </section>
 
 
 
-<section class="right-half offset-2">
+<section class="right-half bg-result">
+
   <div v-for="result in results">
-  <div class="col-lg-12 text-center">
-    <h2 class="section-heading"> {{result.name}} </h2>
-    <hr class="my-4">*
-  </div>
-
-  <div class="h4" text-left>
-    <div> Nom : {{result.name}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-    <div> Masse : {{result.weight}} </div>
-
+    <div class="col-lg-12 text-center">
+      &nbsp
+      <h2 class="section-heading"> {{result.name}} </h2>
+      <hr class="my-4">*
+    </div>
 
     <img src={{result.photo}}> </img>
-  </div>
 
-  <vr>
+    <div class="container text-center">
+      &nbsp
+      <h7> {{result.description}} </h7>
+    </div>
+
+    <div class="col-lg-12 col-md-12 text-center">
+      &nbsp
+      <h5> Caractéristiques techniques </h5>
+      <hr>
+      &nbsp
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        &nbsp
+        <h5> Caractéristiques moteur </h5>
+        &nbsp
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        &nbsp
+        <h5> Caractéristique physique </h5>
+        &nbsp
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <h6> Architecture moteur : {{result.architecture}} </h5>
+        <h5> Nombre de cylindre : {{result.strokenb}} </h5>
+        <h5> Cylindré : {{result.strokecm}} </h5>
+        <h5> Puissance : {{result.power}} </h5>
+        <h5> Couple maximum : {{result.maxtorque}} à {{result.maxtorquerpm}}</h5>
+        <h5> Admission d'essence : {{result.fuelsystem}} </h5>
+        <h5> Architecture moteur : {{result.architecture}} </h5>
+        <h5> Architecture moteur : {{result.architecture}} </h5>
+        <h5> Architecture moteur : {{result.architecture}} </h5>
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        <h5> Masse : {{result.weight}} </h5>
+        <h5> Embrayage : {{result.strokenb}} </h5>
+        <h5> Cylindré : {{result.strokecm}} </h5>
+        <h5> Puissance : {{result.power}} </h5>
+        <h5> Couple maximum : {{result.maxtorque}} à {{result.maxtorquerpm}}</h5>
+        <h5> Admission d'essence : {{result.fuelsystem}} </h5>
+        <h5> Architecture moteur : {{result.architecture}} </h5>
+        <h5> Architecture moteur : {{result.architecture}} </h5>
+        <h5> Architecture moteur : {{result.architecture}} </h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        &nbsp
+        <h5> Caractéristiques moteur </h5>
+        &nbsp
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        &nbsp
+        <h5> Caractéristique physique </h5>
+        &nbsp
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Nombre de cylindre : {{result.strokenb}} </h6>
+        <h6> Cylindré : {{result.strokecm}} </h6>
+        <h6> Puissance : {{result.power}} </h6>
+        <h6> Couple maximum : {{result.maxtorque}} à {{result.maxtorquerpm}}</h6>
+        <h6> Admission d'essence : {{result.fuelsystem}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        <h6> Masse : {{result.weight}} </h6>
+        <h6> Embrayage : {{result.strokenb}} </h6>
+        <h6> Cylindré : {{result.strokecm}} </h6>
+        <h6> Puissance : {{result.power}} </h6>
+        <h6> Couple maximum : {{result.maxtorque}} à {{result.maxtorquerpm}}</h6>
+        <h6> Admission d'essence : {{result.fuelsystem}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 text-center">
+      &nbsp
+      <h5> Avis et conseils </h5>
+      <hr>
+      &nbsp
+    </div>
+  </div>
 
   </break>
 </section>
@@ -555,6 +629,8 @@
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
 <!-- Plugin JavaScript -->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>

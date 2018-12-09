@@ -27,6 +27,7 @@
 </head>
 
 <body id="page-top">
+<form id="findBikesForm">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -70,6 +71,43 @@
         </div>
       </div>
     </header>
+
+
+<div v-random="result in results">
+    <div class="col-sm-12 text-center">
+      <div ng-view autoscroll class="view-animate ng-scope" style>
+        <div id="acceso-galeria" class="show-me wrapper-visible mix ng-scope show">
+          <div class="wrapper">
+            <div class="text">
+      			     <h4>Découvre <!--{{view.randommoto}}--></h4>
+                 <a target="_blank"  class="link small" ng-click="toggleGaleria()">
+                  </a>
+            </div>
+            <figure id="img-1" ng-click="toggleGaleria(0)">
+              <a target="_blank">
+                <img src="img/portfolio/thumbnails/ballade.jpg">
+              </a>
+            </figure>
+            <figure id="img-2" ng-click="toggleGaleria(1)">
+              <a target="_blank">
+                <img src="img/portfolio/thumbnails/moto.jpg">
+              </a>
+            </figure>
+            <figure id="img-3" ng-click="toggleGaleria(2)">
+              <a target="_blank">
+                <img src="img/portfolio/thumbnails/brand.jpg">
+              </a>
+            </figure>
+            <figure id="img-4" ng-click="toggleGaleria(3)">
+              <a target="_blank">
+                <img src="img/portfolio/thumbnails/story.jpg">
+              </a>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+</form>
 
     <!-- Bootstrap core JavaScript -->
     <script src="../vendor/jquery/jquery.min.js"></script>

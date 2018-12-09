@@ -68,7 +68,7 @@
         <h1 class="text-uppercase">
           <strong>Filtrer les critères essentiels nécessaires à ma futur bécanne</strong>
         </h1>
-        <hr>
+        <hr class="short my-4">
       </div>
       <div class="col-lg-8 mx-auto">
         <p class="text-faded mb-5">Le choix d'une moto n'est pas si simple qu'il n'y parrait. Ce site a pour objectif de vous aider à prendre votre décision pour une bécanne qui vous correspond. </p>
@@ -85,7 +85,7 @@
     <div class="col-lg-12 text-center">
       &nbsp
       <h2 class="section-heading">Filtrer les critères de ma moto</h2>
-      <hr class="my-4">
+      <hr class="short my-4">
     </div>
   </div>
 
@@ -487,82 +487,40 @@
 
 
 <section class="right-half bg-result">
-
   <div v-for="result in results">
-    <div class="col-lg-12 text-center">
-      &nbsp
-      <h2 class="section-heading"> {{result.name}} </h2>
-      <hr class="my-4">*
+    &nbsp
+    <div class="text-center">
+      <h2 font-size="3rem" font-weight="700" text-color="#153C51"> {{result.name}} </h2>
+      <hr class="short my-4">
     </div>
 
-    <img src={{result.photo}}> </img>
-
-    <div class="container text-center">
-      &nbsp
-      <h7> {{result.description}} </h7>
+    <div class="container">
+      <div class="row vertical-center">
+        <div class="col-lg-6 col-md-12">
+          <div class="motoimage-box mx-auto">
+            <img class="img-fluid" src="{{result.photo}}" alt="pas de photo"></img>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 text-center">
+          <div class="motoimage-box mx-auto">
+            <h5> {{result.description}} </h5>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="col-lg-12 col-md-12 text-center">
-      &nbsp
-      <h5> Caractéristiques techniques </h5>
-      <hr>
-      &nbsp
+    &nbsp
+    <div class="panel-heading">
+      <h5 class="accordeon text-center" href="#moto1" data-toggle="collapse" data-parent="#accordion"> Caractéristiques techniques <hr class="short my-4"> </h5>
     </div>
-
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
+    <div id="moto1" class="panel-collapse collapse in">
+      <div class="panel-body bg-primary">
+        <div class="row">
+      <div class="col-lg-3 col-md-6 text-white">
         &nbsp
         <h5> Caractéristiques moteur </h5>
         &nbsp
-      </div>
 
-      <div class="col-lg-6 col-md-6">
-        &nbsp
-        <h5> Caractéristique physique </h5>
-        &nbsp
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-        <h6> Architecture moteur : {{result.architecture}} </h5>
-        <h5> Nombre de cylindre : {{result.strokenb}} </h5>
-        <h5> Cylindré : {{result.strokecm}} </h5>
-        <h5> Puissance : {{result.power}} </h5>
-        <h5> Couple maximum : {{result.maxtorque}} à {{result.maxtorquerpm}}</h5>
-        <h5> Admission d'essence : {{result.fuelsystem}} </h5>
-        <h5> Architecture moteur : {{result.architecture}} </h5>
-        <h5> Architecture moteur : {{result.architecture}} </h5>
-        <h5> Architecture moteur : {{result.architecture}} </h5>
-      </div>
-
-      <div class="col-lg-6 col-md-6">
-        <h5> Masse : {{result.weight}} </h5>
-        <h5> Embrayage : {{result.strokenb}} </h5>
-        <h5> Cylindré : {{result.strokecm}} </h5>
-        <h5> Puissance : {{result.power}} </h5>
-        <h5> Couple maximum : {{result.maxtorque}} à {{result.maxtorquerpm}}</h5>
-        <h5> Admission d'essence : {{result.fuelsystem}} </h5>
-        <h5> Architecture moteur : {{result.architecture}} </h5>
-        <h5> Architecture moteur : {{result.architecture}} </h5>
-        <h5> Architecture moteur : {{result.architecture}} </h5>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-        &nbsp
-        <h5> Caractéristiques moteur </h5>
-        &nbsp
-      </div>
-
-      <div class="col-lg-6 col-md-6">
-        &nbsp
-        <h5> Caractéristique physique </h5>
-        &nbsp
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
         <h6> Architecture moteur : {{result.architecture}} </h6>
         <h6> Nombre de cylindre : {{result.strokenb}} </h6>
         <h6> Cylindré : {{result.strokecm}} </h6>
@@ -572,9 +530,14 @@
         <h6> Architecture moteur : {{result.architecture}} </h6>
         <h6> Architecture moteur : {{result.architecture}} </h6>
         <h6> Architecture moteur : {{result.architecture}} </h6>
+        &nbsp
       </div>
 
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-3 col-md-6 text-white">
+        &nbsp
+        <h5> Caractéristique physique </h5>
+        &nbsp
+
         <h6> Masse : {{result.weight}} </h6>
         <h6> Embrayage : {{result.strokenb}} </h6>
         <h6> Cylindré : {{result.strokecm}} </h6>
@@ -584,16 +547,72 @@
         <h6> Architecture moteur : {{result.architecture}} </h6>
         <h6> Architecture moteur : {{result.architecture}} </h6>
         <h6> Architecture moteur : {{result.architecture}} </h6>
+        &nbsp
+      </div>
+
+      <div class="col-lg-3 col-md-6 text-white">
+        &nbsp
+        <h5> Caractéristiques moteur </h5>
+        &nbsp
+
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Nombre de cylindre : {{result.strokenb}} </h6>
+        <h6> Cylindré : {{result.strokecm}} </h6>
+        <h6> Puissance : {{result.power}} </h6>
+        <h6> Couple maximum : {{result.maxtorque}} à {{result.maxtorquerpm}}</h6>
+        <h6> Admission d'essence : {{result.fuelsystem}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        &nbsp
+      </div>
+
+      <div class="col-lg-3 col-md-6 text-white">
+        &nbsp
+        <h5> Caractéristique physique </h5>
+        &nbsp
+
+        <h6> Masse : {{result.weight}} </h6>
+        <h6> Embrayage : {{result.strokenb}} </h6>
+        <h6> Cylindré : {{result.strokecm}} </h6>
+        <h6> Puissance : {{result.power}} </h6>
+        <h6> Couple maximum : {{result.maxtorque}} à {{result.maxtorquerpm}}</h6>
+        <h6> Admission d'essence : {{result.fuelsystem}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        <h6> Architecture moteur : {{result.architecture}} </h6>
+        &nbsp
       </div>
     </div>
-    <div class="col-lg-12 col-md-12 text-center">
-      &nbsp
-      <h5> Avis et conseils </h5>
-      <hr>
-      &nbsp
     </div>
-  </div>
+    </div>
 
+    <div class="panel-heading">
+      &nbsp
+      <h5 class="accordeon text-center" href="#motoavis" data-toggle="collapse" data-parent="#accordion"> Avis et conseils <hr class="short my-4"> </h5>
+    </div>
+    <div id="motoavis" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <div class="panel-body bg-primary">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 text-white">
+              &nbsp
+              <h5> Info et resultat d'essai </h5>
+              &nbsp
+              <h6> S'il y en a eu - lien vers des essais de site partenaire, avis d'autres utilisateur. </h6>
+              &nbsp
+            </div>
+            <div class="col-lg-3 col-md-6 text-white">
+              &nbsp
+              <h5> Compléments : </h5>
+              &nbsp
+              <h6> Lien vers une présentation de la marque et de son histoire et ses particularités ainsi que des infos sur ce qui est compatible avec cette moto </h6>
+              &nbsp
+            </div>
+      </div>
+      </div>
+    </div>
+    <hr class="primary">
   </break>
 </section>
 

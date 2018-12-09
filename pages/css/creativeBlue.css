@@ -15,12 +15,20 @@ body {
 }
 
 hr {
-  max-width: 50px;
   border-width: 3px;
   border-color: ##C63F3F; /*couleur de la barre de séparation*/
 }
 
+hr.short {
+  max-width: 50px;
+}
+
+hr.primary {
+  color: ##C63F3F; /*couleur de la barre de séparation*/
+}
+
 hr.light {
+  max-width: 50px;
   border-color: #fff; /*couleur de la barre de séparation light*/
 }
 
@@ -50,32 +58,32 @@ h2,
 h3,
 h4,
 h5,
-h6,
-h7 {
+h6 {
   font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 1000;
+  -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #153C51;
 }
 
 h5 {
   margin-left: 40px;
+
 }
 h6 {
   font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
   margin-left: 40px;
   font-size: 1rem;
   font-weight: 20;
-  text-align: left;
 }
 
-h7 {
-  font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
-
-  font-size: 1rem;
-  font-weight: 20;
-  text-align: center;
-}
 
 .bg-primary {
-  background-color: #C63F3F !important; /*Couleur du fond de section coloré*/
+  background-color: #153C51 !important; /*Couleur du fond de section coloré*/
 }
 
 .font-primary {
@@ -294,6 +302,18 @@ header.masthead p {
   max-width: 400px;
 }
 
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.motoimage-box {
+  position: relative;
+  display: block;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
 .portfolio-box {
   position: relative;
   display: block;
@@ -434,22 +454,22 @@ header.masthead p {
     margin-top: 100px;
     margin-left: 70px;
     margin-right: 70px;
-    height: 200px; /* hauteur de la boite*/
+    height: 300px; /* hauteur de la boite*/
 	}
 	.cuadro_intro_hover:hover .caption{
 		opacity: 1; /* opacité du texte qui apparait*/
-		transform: translateY(-150px); /*NA */
-		-webkit-transform:translateY(-150px); /* de combien de px le texte monte */
-		-moz-transform:translateY(-150px);
-		-ms-transform:translateY(-150px);
-		-o-transform:translateY(-150px);
+		transform: translateY(-250px); /*NA */
+		-webkit-transform:translateY(-250px); /* de combien de px le texte monte */
+		-moz-transform:translateY(-250px);
+		-ms-transform:translateY(-250px);
+		-o-transform:translateY(-250px);
 	}
 	.cuadro_intro_hover img{
 		z-index: 5; /*NA */
 	}
 	.cuadro_intro_hover .caption{
 		position: absolute; /*position de départ du texte */
-		top:150px;
+		top:250px;
 		-webkit-transition:all 0.3s ease-in-out;
 		-moz-transition:all 0.3s ease-in-out;
 		-o-transition:all 0.3s ease-in-out;
@@ -459,7 +479,7 @@ header.masthead p {
 	}
 	.cuadro_intro_hover .blur{
 		background-color: rgba(198,198,198,0.7);
-		height: 200px;
+		height: 300px;
 		z-index: 5;
 		position: absolute;
 		width: 100%;

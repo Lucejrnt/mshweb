@@ -56,6 +56,7 @@ app.get('/', function(request, response){
 app.get('/motos', (request, response) => {
   var query = urlParser.parse(request.url, true).query;
   // querying the database and putting the results in the http response
+  console.log(query);
   motos.find(query).toArray(function(err, res)  {
     if (err != null) {
       console.log(err);

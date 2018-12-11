@@ -1,12 +1,12 @@
 var view = new Vue({
-  el: '#findBikesForm',
+  el: '#mainVue',
   data: {
     /* Valeurs retournées par la base de données afin d'afficher les possibilités dans le formulaire */
       filter1: null,
       pw: null,
       mail: null,
       // MOTEUR
-      powers: [], //Toutes les puissances disponibles dans la base de données
+      powers: null, //Toutes les puissances disponibles dans la base de données
       maxtorques: null,
       maxtorquerpms: null,
       strokenbs: null,
@@ -40,48 +40,59 @@ var view = new Vue({
 
       /* Valeurs choisie par l'utilisateur afin de chercher les valeurs correspondantes dans la base de données */
       userChoice : {
-        permis: null,
+        power : null, //Toutes les puissances disponibles dans la base de données
+        maxtorque : null,
+        maxtorquerpm : null,
+        strokenb : null,
+        strokecm : null,
+        architecture : null,
+        // SECURTIE
+        equipment : null,
+        frontbrake : null,
+        rearbrake : null,
+        tires : null,
+        // MANIABILITE
+        weight : null,
+        handlebar : null,
+        frontwheel : null,
+        rearwheel : null,
+        frame : null,
+        // LOOK
+        type : null,
+        style : null,
+        coloris : null,
+        // CONFORT
+        suspension : null,
+        duo : null,
+        position : null,
+        seatheight : null,
+        windprotection : null,
+        confortaccessories : null,
+        // BRICOLOAGE
+        homemadeservice : null,
         transformations : null,
-        entretiens: null,
-        accessoires: null,
-        bulle : null,
-        duo: null,
-        hauteur: null,
-        position: null,
-        suspension: null,
-        coloris: null,
-        style: null,
-        type: null,
-        roue_ar: null,
-        roue_av: null,
-        cadre: null,
-        guidon: null,
-        masse: null,
-        pneus: null,
-        frein_ar: null,
-        frein_av: null,
-        equipements: null,
-        architecture: null,
-        cylindre_nb: null,
-        cylindre_cm: null,
-        rpm_cmax: null,
-        couple_max: null,
-        power: null
       },
 
       results : [],
       // Options utilisées pour le slider
       sliderOptions : {
-        value: [ //valeur de départ des sliders
-          37,
-          60
+        value: [
+          1,
+          200
         ],
+        width: "100%",
+        height: 8,
+        dotSize: 20,
         min: 0,
-        max: 100, //bornes max et min
+        max: 200,
+        disabled: false,
+        show: true,
+        tooltip: "always",
         tooltipDir: [
           "bottom",
           "top"
         ],
+        piecewise: false,
         style: {
           "marginBottom": "30px"
         },
@@ -109,50 +120,10 @@ var view = new Vue({
         ],
         processStyle: {
           "backgroundImage": "-webkit-linear-gradient(left, #f05b72, #3498db)"
-        }
+        },
+        display : false
       },
 
-      // powersliderOptions : {
-      //   value: [ //valeur de départ des sliders
-      //     0,
-      //     200
-      //   ],
-      //   data: [
-      //     view.powers
-      //   ],
-      //   tooltipDir: [
-      //     "bottom",
-      //     "top"
-      //   ],
-      //   style: {
-      //     "marginBottom": "30px"
-      //   },
-      //   bgStyle: {
-      //     "backgroundColor": "#fff",
-      //     "boxShadow": "inset 0.5px 0.5px 3px 1px rgba(0,0,0,.36)"
-      //   },
-      //   sliderStyle: [
-      //     {
-      //       "backgroundColor": "#f05b72"
-      //     },
-      //     {
-      //       "backgroundColor": "#3498db"
-      //     }
-      //   ],
-      //   tooltipStyle: [
-      //     {
-      //       "backgroundColor": "#f05b72",
-      //       "borderColor": "#f05b72"
-      //     },
-      //     {
-      //       "backgroundColor": "#3498db",
-      //       "borderColor": "#3498db"
-      //     }
-      //   ],
-      //   processStyle: {
-      //     "backgroundImage": "-webkit-linear-gradient(left, #f05b72, #3498db)"
-      //   }
-      // },
     display: false,
     options: null
   },
@@ -170,7 +141,6 @@ var view = new Vue({
           view.results = data;
       });
     },
-
     query: function(event) {
       // Those values are supposed to be queried in your database
 
@@ -178,7 +148,8 @@ var view = new Vue({
       $.get( "/power", function(data) {
         view.sliderOptions.min = parseInt(data[0]);
         view.sliderOptions.max = parseInt(data[data.length-1]);
-          view.powers = data;
+        view.sliderOptions.value = [view.sliderOptions.min +1, view.sliderOptions.max - 1];
+        view.powers = data;
       });
 
       // $.get( "/name", function(data) {

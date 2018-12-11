@@ -271,11 +271,13 @@ header.masthead h1 {
 
 header.masthead p {
   font-weight: 300;
+
 }
 
 @media (min-width: 768px) {
   header.masthead p {
     font-size: 1.15rem;
+    -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
   }
 }
 
@@ -452,8 +454,8 @@ header.masthead p {
 		position: relative; /*position du cadre de texte relative au container sur lequel il est appliqué*/
 		overflow: hidden;  /* permet de cacher ce qui dépasse de la boite */
     margin-top: 100px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
     height: 300px; /* hauteur de la boite*/
 	}
 	.cuadro_intro_hover:hover .caption{

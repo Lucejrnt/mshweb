@@ -86,6 +86,11 @@ h6 {
   background-color: #153C51 !important; /*Couleur du fond de section coloré*/
 }
 
+.bg-primaryred {
+  background-color: #C63F3F !important; /*Couleur du fond de section coloré*/
+}
+
+
 .font-primary {
   color: #54bdee !important; /*Couleur texte des filtres et tout*/
   font-size: 17px;

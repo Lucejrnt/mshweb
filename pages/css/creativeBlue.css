@@ -88,6 +88,10 @@ h6 {
   background-color: #153C51 !important; /*Couleur du fond de section coloré*/
 }
 
+.bg-gray {
+  background-color: #f2f2f2 !important; /*Couleur du fond de section coloré*/
+}
+
 .bg-primaryred {
   background-color: #C63F3F !important; /*Couleur du fond de section coloré*/
 }
@@ -770,4 +774,191 @@ header.masthead p {
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
+}
+
+/* SCROLL TO TOP */
+
+.scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background: rgba(198, 63, 63, 0.5);
+  line-height: 45px;
+}
+
+.scroll-to-top:focus, .scroll-to-top:hover {
+  color: white;
+}
+
+.scroll-to-top:hover {
+  background: #C63F3F;
+}
+
+.scroll-to-top i {
+  font-weight: 800;
+}
+
+
+/* PORTFOLIO STYLE DE MOTO */
+
+#portfolioo .portfolioo-item {
+  right: 0;
+  margin: 0 0 15px;
+}
+
+#portfolioo .portfolioo-item .portfolioo-link {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#portfolioo .portfolioo-item .portfolioo-link .portfolioo-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: rgba(254, 209, 54, 0.9);
+}
+
+#portfolioo .portfolioo-item .portfolioo-link .portfolioo-hover:hover {
+  opacity: 1;
+}
+
+#portfolioo .portfolioo-item .portfolioo-link .portfolioo-hover .portfolioo-hover-content {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: white;
+}
+
+#portfolioo .portfolioo-item .portfolioo-link .portfolioo-hover .portfolioo-hover-content i {
+  margin-top: -12px;
+}
+
+#portfolioo .portfolioo-item .portfolioo-link .portfolioo-hover .portfolioo-hover-content h3,
+#portfolioo .portfolioo-item .portfolioo-link .portfolioo-hover .portfolioo-hover-content h4 {
+  margin: 0;
+}
+
+#portfolioo .portfolioo-item .portfolioo-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#portfolioo .portfolioo-item .portfolioo-caption h4 {
+  margin: 0;
+  text-transform: none;
+}
+
+#portfolioo .portfolioo-item .portfolioo-caption p {
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#portfolioo * {
+  z-index: 2;
+}
+
+@media (min-width: 767px) {
+  #portfolioo .portfolioo-item {
+    margin: 0 0 30px;
+  }
+}
+
+.portfolioo-modal {
+  padding-right: 0px !important;
+}
+
+.portfolioo-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+
+.portfolioo-modal .modal-content {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.portfolioo-modal .modal-content h2 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.portfolioo-modal .modal-content p {
+  margin-bottom: 30px;
+}
+
+.portfolioo-modal .modal-content p.item-intro {
+  font-size: 16px;
+  font-style: italic;
+  margin: 20px 0 30px;
+  font-family: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.portfolioo-modal .modal-content ul.list-inline {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.portfolioo-modal .modal-content img {
+  margin-bottom: 30px;
+}
+
+.portfolioo-modal .modal-content button {
+  cursor: pointer;
+}
+
+.portfolioo-modal .close-modal {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.portfolioo-modal .close-modal:hover {
+  opacity: 0.3;
+}
+
+.portfolioo-modal .close-modal .lr {
+  /* Safari and Chrome */
+  z-index: 1051;
+  width: 1px;
+  height: 75px;
+  margin-left: 35px;
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #212529;
+}
+
+.portfolioo-modal .close-modal .lr .rl {
+  /* Safari and Chrome */
+  z-index: 1052;
+  width: 1px;
+  height: 75px;
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  background-color: #212529;
 }

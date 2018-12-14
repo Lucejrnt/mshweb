@@ -88,6 +88,12 @@ h6 {
   background-color: #153C51 !important; /*Couleur du fond de section coloré*/
 }
 
+.bg-primaryshade {
+  background-color: -webkit-gradient(linear, left top, left bottom, from(#153C51), color-stop(65%, rgba(21, 60, 81, 0.9)), to(rgba(21, 60, 81, 0))) !important; /*Couleur du fond de section coloré*/
+  background: linear-gradient(to bottom, #153C51 0%, rgba(21, 60, 81, 0.9) 65%, rgba(21, 60, 81, 0) 100%);
+}
+
+
 .bg-gray {
   background-color: #f2f2f2 !important; /*Couleur du fond de section coloré*/
 }
@@ -961,4 +967,17 @@ header.masthead p {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   background-color: #212529;
+}
+
+/* IMAGE NEXT TO TEXT WITH BAR */
+
+.projects-section .featured-text {
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  .projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+  }
 }

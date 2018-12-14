@@ -33,13 +33,13 @@ hr.light {
 }
 
 a {
-  color: #54bdee; /*couleur texte adresse email et maybe petits points*/
+  color: #000000; /*couleur texte adresse email et maybe petits points*/
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: #2e42b2; /*couleur des textes en a*/
+  color: #C63F3F; /*couleur des textes en a*/
 }
 
 .selectwidthauto

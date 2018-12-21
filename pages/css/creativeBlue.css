@@ -474,7 +474,7 @@ header.masthead p {
     margin-top: 100px;
     margin-left: 50px;
     margin-right: 50px;
-    height: 300px; /* hauteur de la boite*/
+    height: 100%; /* hauteur de la boite*/
 	}
 	.cuadro_intro_hover:hover .caption{
 		opacity: 1; /* opacité du texte qui apparait*/
